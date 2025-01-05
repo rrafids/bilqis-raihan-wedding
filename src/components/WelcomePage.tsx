@@ -49,7 +49,7 @@ export default function OpeningPage() {
       <img
         alt='border gif'
         src='images/bg-flowers-pink.png'
-        className='absolute top-0 left-0 w-full h-full object-cover'
+        className='absolute top-0 left-0 w-max h-screen object-cover'
       />
 
       {/* Falling Leaves */}
@@ -85,7 +85,7 @@ export default function OpeningPage() {
 
           {/* Step 2: "Bilqis & Raihan" */}
           <h1
-            className={`text-[#855f58] font-medium font-royal-wedding text-[75px] transform transition-all duration-[1.5s] ease-in-out ${
+            className={`mt-[20px] text-[#855f58] font-medium font-royal-wedding text-[75px] transform transition-all duration-[1.5s] ease-in-out ${
               step >= 2
                 ? 'translate-y-0 opacity-100'
                 : 'translate-y-10 opacity-0'
@@ -102,7 +102,7 @@ export default function OpeningPage() {
         >
           {/* Main Image */}
           <img
-            className='border-2 border-white rounded-[100px] z-10 sm:w-[400px] w-[230px]'
+            className='border-4 border-opacity-50 border-white rounded-[100px] z-10 sm:w-[400px] w-[230px]'
             alt='bilqisfa-raihan'
             src='images/bilqisfa-raihan-clean.png'
           />
@@ -113,15 +113,15 @@ export default function OpeningPage() {
             className='absolute bottom-[-90px] right-[-90px] w-[200px] z-999 transform rotate-[50deg] opacity-75' // Added opacity
           /> */}
         </div>
-        <div className='mt-[20px]'>
+        <div
+          className={`mt-[20px] rounded-lg px-[5px] py-[5px] transform transition-all duration-[1.5s] ease-in-out ${
+            step >= 4 ? 'translate-y-0 opacity-90' : 'translate-y-10 opacity-0'
+          }`}
+        >
           <p
-            className={`italic text-[17px] text-[#855f58] font-times-new-roman transform transition-all duration-[1.5s] ease-in-out ${
-              step >= 4
-                ? 'translate-y-0 opacity-100'
-                : 'translate-y-10 opacity-0'
-            }`}
+            className={`text-[17px] text-[#855f58] font-semibold font-times-new-roman`}
           >
-            #BILAngRAIHAN
+            Sabtu, 8 Februari 2025
           </p>
         </div>
       </div>
@@ -132,15 +132,36 @@ export default function OpeningPage() {
         src='images/leaves.gif' // Replace with the actual path to your GIF
         className='absolute top-[-75px] left-[-10px] w-[175px] h-[175px] z-999 transform rotate-[100deg] opacity-60' // Added opacity
       />
+
       <img
         alt='top-left-gif'
         src='images/leaves.gif' // Replace with the actual path to your GIF
         className='absolute top-[-30px] left-[-70px] w-[175px] h-[175px] z-999 transform rotate-[20deg] opacity-65' // Added opacity
       />
+
       <img
         alt='top-left-gif'
         src='images/leaves.gif' // Replace with the actual path to your GIF
         className='absolute top-[50px] left-[-80px] w-[175px] h-[175px] z-999 transform rotate-[50deg] opacity-70' // Added opacity
+      />
+
+      {/* GIF Image positioned at top-right corner */}
+      <img
+        alt='top-left-gif'
+        src='images/leaves.gif' // Replace with the actual path to your GIF
+        className='absolute top-[-75px] right-[-10px] w-[175px] h-[175px] z-999 transform rotate-[280deg] opacity-60' // Added opacity
+      />
+
+      <img
+        alt='top-left-gif'
+        src='images/leaves.gif' // Replace with the actual path to your GIF
+        className='absolute top-[-30px] right-[-70px] w-[175px] h-[175px] z-999 transform rotate-[200deg] opacity-65' // Added opacity
+      />
+
+      <img
+        alt='top-left-gif'
+        src='images/leaves.gif' // Replace with the actual path to your GIF
+        className='absolute top-[50px] right-[-80px] w-[175px] h-[175px] z-999 transform rotate-[230deg] opacity-70' // Added opacity
       />
 
       {/* <img

@@ -1,119 +1,76 @@
 import { useState, useEffect } from 'react';
 
-// Define the type for the leaf object
-interface Leaf {
-  id: number;
-  size: number;
-  left: number;
-  delay: number;
-  duration: number;
-  type: string; // Add type for the leaf icon
+interface OpeningPageProps {
+  onOpenInvitation: () => void;
 }
 
-export default function OpeningPage() {
-  const [step, setStep] = useState(0);
-  const [leaves, setLeaves] = useState<Leaf[]>([]); // Specify that leaves is an array of Leaf objects
-
-  // List of different leaf icons (you can replace these with custom images or other emojis)
-  const leafTypes = ['🍂', '🍃', '🌿'];
+export default function OpeningPage({ onOpenInvitation }: OpeningPageProps) {
+  const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
-    // Trigger animation steps
-    const interval = setInterval(() => {
-      setStep((prevStep) => prevStep + 1);
-    }, 1000); // Trigger the next step every second
-    return () => clearInterval(interval); // Clean up the interval
-  }, []);
-
-  useEffect(() => {
-    // Generate leaves dynamically
-    const generateLeaves = () => {
-      const leafCount = 8; // Number of falling leaves
-      const newLeaves = Array.from({ length: leafCount }).map((_, index) => ({
-        id: index,
-        size: Math.random() * 2 + 1, // Random size (between 1 and 3)
-        left: Math.random() * 100, // Random horizontal position
-        delay: Math.random() * 5, // Random animation delay (between 0 and 5 seconds)
-        duration: Math.random() * 8 + 12, // Increased animation duration (between 12 and 20 seconds)
-        type: leafTypes[Math.floor(Math.random() * leafTypes.length)], // Randomly pick a leaf type
-      }));
-      setLeaves(newLeaves);
+    if (isVisible) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
     };
+  }, [isVisible]);
 
-    generateLeaves();
-  }, []);
+  const handleOpenInvitation = () => {
+    setIsVisible(false);
+    setTimeout(() => {
+      onOpenInvitation(); // Call the parent-provided handler
+    }, 1000); // Match the animation duration
+  };
 
   return (
-    <div className='w-full min-h-screen flex flex-col justify-center items-center relative overflow-hidden bg-gray-300'>
-      {/* Background Image */}
+    <div
+      className={`relative w-full min-h-screen flex flex-col justify-center items-center overflow-hidden bg-gray-300 transition-opacity duration-1000 ${
+        isVisible ? 'opacity-100 z-50' : 'opacity-0 pointer-events-none'
+      }`}
+    >
       <img
         alt='border gif'
-        src='images/bg-flowers-pink.png'
-        className='absolute top-0 left-0 w-full h-full object-cover'
+        src='images/heaven-gate-bg.png'
+        className='absolute top-0 left-0 w-full h-screen object-cover'
       />
 
-      {/* Falling Leaves */}
-      {leaves.map((leaf) => (
-        <div
-          key={leaf.id}
-          className='absolute leaf'
-          style={{
-            top: '-10%',
-            left: `${leaf.left}%`,
-            animationDelay: `${leaf.delay}s`,
-            animationDuration: `${leaf.duration}s`,
-            transform: `scale(${leaf.size})`,
-          }}
-        >
-          {leaf.type} {/* Display the randomly selected leaf icon */}
+      <div className='z-10 flex flex-col items-center'>
+        <p className='font-times-new-roman text-[#855f58]'>The Wedding of</p>
+        <div className='flex flex-col space-y-[-50px] items-center'>
+          <span className='text-[#855f58] font-royal-wedding text-[80px]'>
+            Bilqis
+          </span>
+          <span className='text-[#855f58] font-royal-wedding text-[80px]'>
+            &
+          </span>
+          <span className='text-[#855f58] font-royal-wedding text-[80px]'>
+            Raihan
+          </span>
         </div>
-      ))}
 
-      {/* Content */}
-      <div className='flex flex-col absolute h-screen mt-[-175px] items-center place-content-center z-10 p-4 text-center font-bold'>
-        <div className='space-y-[-10px]'>
-          {/* Step 1: "The Wedding of" */}
-          <p
-            className={`text-[17px] text-gray-600 font-times-new-roman transform transition-all duration-[1.5s] ease-in-out ${
-              step >= 1
-                ? 'translate-y-0 opacity-100'
-                : 'translate-y-10 opacity-0'
-            }`}
+        <div className='flex flex-col items-center mt-[30px] space-y-5'>
+          <div className='flex flex-col items-center space-y-1'>
+            <h1 className='text-[#855f58]'>Dear,</h1>
+            <h1 className='text-[#855f58] text-[17px] font-semibold'>
+              Januar Perlindungan
+            </h1>
+          </div>
+          <button
+            className='text-[15px] animated-zoom text-white bg-[#855f58] rounded-full px-5 py-3 hover:scale-105 transform transition'
+            onClick={handleOpenInvitation}
           >
-            The Wedding of
-          </p>
-
-          {/* Step 2: "Bilqis & Raihan" */}
-          <h1
-            className={`text-[#855f58] font-medium font-royal-wedding text-[75px] transform transition-all duration-[1.5s] ease-in-out ${
-              step >= 2
-                ? 'translate-y-0 opacity-100'
-                : 'translate-y-10 opacity-0'
-            }`}
-          >
-            Bilqis & Raihan
-          </h1>
-        </div>
-        {/* Step 3: Image */}
-        <div
-          className={`relative transform transition-all duration-[1.5s] ease-in-out ${
-            step >= 3 ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
-          }`}
-        >
-          {/* Main Image */}
-          <img
-            className='rounded-[100px] z-10 sm:w-[400px] w-[290px]'
-            alt='bilqisfa-raihan'
-            src='images/bilqisfa-raihan-clean.png'
-          />
+            Open Invitation
+          </button>
         </div>
       </div>
 
-      {/* GIF Image positioned at top-left corner */}
       <img
         alt='top-left-gif'
-        src='images/leaves.gif' // Replace with the actual path to your GIF
-        className='absolute top-10 left-0 w-32 h-32 z-999'
+        src='images/birds-tp.gif'
+        className='absolute top-[0px] w-full h-[175px] z-999 transform'
       />
     </div>
   );
