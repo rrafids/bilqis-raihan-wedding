@@ -14,7 +14,7 @@ export default function OpeningPage() {
   const [step, setStep] = useState(0);
   const [leaves, setLeaves] = useState<Leaf[]>([]); // Specify that leaves is an array of Leaf objects
 
-  // List of different leaf icons (you can replace these with custom images or other emojis)
+  // List of different leaf icons (you can replace these with custom image or other emojis)
   const leafTypes = ['🍂', '🍃', '🌿'];
 
   useEffect(() => {
@@ -48,7 +48,7 @@ export default function OpeningPage() {
       {/* Background Image */}
       <img
         alt='border gif'
-        src='images/bg-flowers-pink.png'
+        src='image/bg-flowers-pink.png'
         className='absolute top-0 left-0 w-max h-screen object-cover'
       />
 
@@ -74,7 +74,7 @@ export default function OpeningPage() {
         <div className='space-y-[-15px]'>
           {/* Step 1: "The Wedding of" */}
           <p
-            className={`text-[17px] text-[#855f58] font-times-new-roman transform transition-all duration-[1.5s] ease-in-out ${
+            className={`text-[17px] text-[#855f58] font-serif transform transition-all duration-[1.5s] ease-in-out ${
               step >= 1
                 ? 'translate-y-0 opacity-100'
                 : 'translate-y-10 opacity-0'
@@ -104,75 +104,64 @@ export default function OpeningPage() {
           <img
             className='border-4 border-opacity-50 border-white rounded-[100px] z-10 sm:w-[400px] w-[230px]'
             alt='bilqisfa-raihan'
-            src='images/bilqisfa-raihan-clean.png'
+            src='image/bilqisfa-raihan-clean.png'
           />
 
           {/* <img
             alt='bottom-left-gif'
-            src='images/flower-bucket.gif' // Replace with the actual path to your GIF
+            src='gif/flower-bucket.gif' // Replace with the actual path to your GIF
             className='absolute bottom-[-90px] right-[-90px] w-[200px] z-999 transform rotate-[50deg] opacity-75' // Added opacity
           /> */}
-        </div>
-        <div
-          className={`mt-[20px] rounded-lg px-[5px] py-[5px] transform transition-all duration-[1.5s] ease-in-out ${
-            step >= 4 ? 'translate-y-0 opacity-90' : 'translate-y-10 opacity-0'
-          }`}
-        >
-          <p
-            className={`text-[17px] text-[#855f58] font-semibold font-times-new-roman`}
-          >
-            Sabtu, 8 Februari 2025
-          </p>
         </div>
       </div>
 
       {/* GIF Image positioned at top-left corner */}
       <img
         alt='top-left-gif'
-        src='images/leaves.gif' // Replace with the actual path to your GIF
+        src='gif/leaves.gif' // Replace with the actual path to your GIF
         className='absolute top-[-75px] left-[-10px] w-[175px] h-[175px] z-999 transform rotate-[100deg] opacity-60' // Added opacity
       />
 
       <img
         alt='top-left-gif'
-        src='images/leaves.gif' // Replace with the actual path to your GIF
+        src='gif/leaves.gif' // Replace with the actual path to your GIF
         className='absolute top-[-30px] left-[-70px] w-[175px] h-[175px] z-999 transform rotate-[20deg] opacity-65' // Added opacity
       />
 
       <img
         alt='top-left-gif'
-        src='images/leaves.gif' // Replace with the actual path to your GIF
+        src='gif/leaves.gif' // Replace with the actual path to your GIF
         className='absolute top-[50px] left-[-80px] w-[175px] h-[175px] z-999 transform rotate-[50deg] opacity-70' // Added opacity
       />
 
-      {/* GIF Image positioned at top-right corner */}
+      {/* GIF gif positioned at top-right corner */}
       <img
         alt='top-left-gif'
-        src='images/leaves.gif' // Replace with the actual path to your GIF
+        src='gif/leaves.gif' // Replace with the actual path to your GIF
         className='absolute top-[-75px] right-[-10px] w-[175px] h-[175px] z-999 transform rotate-[280deg] opacity-60' // Added opacity
       />
 
       <img
         alt='top-left-gif'
-        src='images/leaves.gif' // Replace with the actual path to your GIF
+        src='gif/leaves.gif' // Replace with the actual path to your GIF
         className='absolute top-[-30px] right-[-70px] w-[175px] h-[175px] z-999 transform rotate-[200deg] opacity-65' // Added opacity
       />
 
       <img
         alt='top-left-gif'
-        src='images/leaves.gif' // Replace with the actual path to your GIF
+        src='gif/leaves.gif' // Replace with the actual path to your GIF
         className='absolute top-[50px] right-[-80px] w-[175px] h-[175px] z-999 transform rotate-[230deg] opacity-70' // Added opacity
       />
 
       {/* <img
         alt='bottom-left-gif'
-        src='images/three-butterflies.gif' // Replace with the actual path to your GIF
+        src='gif/three-butterflies.gif' // Replace with the actual path to your GIF
         className='absolute bottom-[150px] left-[-20px] w-[150px] h-[150px] z-999 transform rotate-[50deg] opacity-75' // Added opacity
       /> */}
 
       <img
         alt='bottom-left-gif'
-        src='images/butterfly.gif' // Replace with the actual path to your GIF
+        src='gif/butterfly.gif' // Replace with the actual path to your GIF
         className='absolute bottom-[220px] left-[10px] w-[75px] z-999 transform rotate-[50deg] opacity-75' // Added opacity
       />
     </div>

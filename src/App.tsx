@@ -4,6 +4,9 @@ import WelcomePage from './components/WelcomePage';
 import PrayerPage from './components/PrayerPage';
 import BridePage from './components/BridePage';
 import GroomPage from './components/GroomPage';
+import InvitationDetailPage from './components/InvitationDetailPage';
+import GiftPage from './components/GiftPage';
+import ClosingPage from './components/ClosingPage';
 
 function App() {
   const audioRef = useRef<HTMLAudioElement | null>(null);
@@ -29,7 +32,7 @@ function App() {
   return (
     <div className='overflow-hidden'>
       <audio ref={audioRef} loop>
-        <source src='audios/you-are-still-the-one.mp3' type='audio/mp3' />
+        <source src='audio/you-are-still-the-one.mp3' type='audio/mp3' />
         Your browser does not support the audio element.
       </audio>
 
@@ -46,20 +49,13 @@ function App() {
 
           <GroomPage />
 
+          <InvitationDetailPage />
+
+          <GiftPage />
+
+          <ClosingPage />
+
           {/* <div>
-            Undangan
-            <h1>Profile The Bride</h1>
-          </div>
-
-          <div>
-            <h1>Profile The Groom</h1>
-          </div>
-
-          <div>Count down</div>
-
-          <div>Akad timeline & details</div>
-          <div>Resepsi timeline & details</div>
-
           <div>Gallery 1</div>
           <div>Gallery 2</div>
 
