@@ -6,6 +6,8 @@ export default function GiftPage() {
   const giftRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
+    const currentGiftRef = giftRef.current; // Copy giftRef.current to a local variable
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -15,13 +17,13 @@ export default function GiftPage() {
       { threshold: 0.2 } // Trigger when 20% of the element is visible
     );
 
-    if (giftRef.current) {
-      observer.observe(giftRef.current);
+    if (currentGiftRef) {
+      observer.observe(currentGiftRef);
     }
 
     return () => {
-      if (giftRef.current) {
-        observer.unobserve(giftRef.current);
+      if (currentGiftRef) {
+        observer.unobserve(currentGiftRef);
       }
     };
   }, []);

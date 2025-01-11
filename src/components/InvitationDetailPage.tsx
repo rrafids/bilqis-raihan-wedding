@@ -5,6 +5,8 @@ export default function InvitationDetailPage() {
   const detailRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
+    const currentDetailRef = detailRef.current; // Copy detailRef.current to a local variable
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -14,13 +16,13 @@ export default function InvitationDetailPage() {
       { threshold: 0.2 } // Trigger when 20% of the element is visible
     );
 
-    if (detailRef.current) {
-      observer.observe(detailRef.current);
+    if (currentDetailRef) {
+      observer.observe(currentDetailRef);
     }
 
     return () => {
-      if (detailRef.current) {
-        observer.unobserve(detailRef.current);
+      if (currentDetailRef) {
+        observer.unobserve(currentDetailRef);
       }
     };
   }, []);

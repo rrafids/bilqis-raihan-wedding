@@ -14,13 +14,15 @@ export default function PrayerPage() {
       { threshold: 0.2 } // Trigger when 20% of the element is visible
     );
 
-    if (prayerRef.current) {
-      observer.observe(prayerRef.current);
+    const currentPrayerRef = prayerRef.current; // Store the ref value in a variable
+
+    if (currentPrayerRef) {
+      observer.observe(currentPrayerRef);
     }
 
     return () => {
-      if (prayerRef.current) {
-        observer.unobserve(prayerRef.current);
+      if (currentPrayerRef) {
+        observer.unobserve(currentPrayerRef); // Use the stored reference
       }
     };
   }, []);
