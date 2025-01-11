@@ -5,6 +5,8 @@ export default function BridePage() {
   const brideRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
+    const currentBrideRef = brideRef.current;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -14,13 +16,13 @@ export default function BridePage() {
       { threshold: 0.2 } // Trigger when 20% of the element is visible
     );
 
-    if (brideRef.current) {
-      observer.observe(brideRef.current);
+    if (currentBrideRef) {
+      observer.observe(currentBrideRef);
     }
 
     return () => {
-      if (brideRef.current) {
-        observer.unobserve(brideRef.current);
+      if (currentBrideRef) {
+        observer.unobserve(currentBrideRef);
       }
     };
   }, []);
