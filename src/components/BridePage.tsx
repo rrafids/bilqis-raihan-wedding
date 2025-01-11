@@ -80,7 +80,7 @@ export default function BridePage() {
                   : 'opacity-0 translate-y-[-30px]'
               }`}
             />
-            <div className='flex items-center space-x-2 w-max text-[#5f443f] mt-2 bg-[#e0d8d6] py-1 px-3 rounded-lg duration-[2000ms] delay-[1000ms]'>
+            <div className='flex items-center space-x-2 w-max text-[#5f443f] mt-2 bg-[#e0d8d6] py-1 px-3 rounded-lg '>
               <img
                 alt='instagram icon'
                 src='image/ig.png'
