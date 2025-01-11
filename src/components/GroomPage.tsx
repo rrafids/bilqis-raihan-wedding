@@ -5,6 +5,8 @@ export default function BridePage() {
   const brideRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
+    const currentBrideRef = brideRef.current; // Copy brideRef.current to a local variable
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -14,13 +16,13 @@ export default function BridePage() {
       { threshold: 0.2 } // Trigger when 20% of the element is visible
     );
 
-    if (brideRef.current) {
-      observer.observe(brideRef.current);
+    if (currentBrideRef) {
+      observer.observe(currentBrideRef);
     }
 
     return () => {
-      if (brideRef.current) {
-        observer.unobserve(brideRef.current);
+      if (currentBrideRef) {
+        observer.unobserve(currentBrideRef);
       }
     };
   }, []);
@@ -28,14 +30,14 @@ export default function BridePage() {
   return (
     <div
       ref={brideRef}
-      className='w-full min-h-screen flex flex-col justify-top relative overflow-hidden bg-gray-300 p-5 font-serif pt-[50px]'
+      className="w-full min-h-screen flex flex-col justify-top relative overflow-hidden bg-gray-300 p-5 font-serif pt-[50px]"
     >
       <img
-        alt='border gif'
-        src='image/bg-flower-light.png'
-        className='absolute top-0 left-0 w-full h-screen object-cover'
+        alt="border gif"
+        src="image/bg-flower-light.png"
+        className="absolute top-0 left-0 w-full h-screen object-cover"
       />
-      <div className='absolute'>
+      <div className="absolute">
         <div
           className={`text-[#5f443f] flex w-full items-center justify-center text-[65px] transition-all duration-[2000ms] ${
             isVisible
@@ -46,8 +48,8 @@ export default function BridePage() {
           &
         </div>
 
-        <div className='mt-[50px] grid grid-cols-3'>
-          <div className='flex flex-col items-center place-content-center text-right pl-3 pr-10 space-y-[-10px]'>
+        <div className="mt-[50px] grid grid-cols-3">
+          <div className="flex flex-col items-center place-content-center text-right pl-3 pr-10 space-y-[-10px]">
             <h1
               className={`text-[15px] transition-all duration-[2000ms] delay-[1000ms] ${
                 isVisible
@@ -68,10 +70,10 @@ export default function BridePage() {
             </h1>
           </div>
 
-          <div className='col-span-2 flex flex-col items-end justify-content-end me-[30px]'>
+          <div className="col-span-2 flex flex-col items-end justify-content-end me-[30px]">
             <img
-              alt='the bride img'
-              src='image/the-groom.png'
+              alt="the bride img"
+              src="image/the-groom.png"
               className={`w-[200px] rounded-t-full border-4 border-opacity-30 border-white transition-all duration-[2000ms] delay-[1000ms] ${
                 isVisible
                   ? 'opacity-100 translate-y-0'
@@ -86,9 +88,9 @@ export default function BridePage() {
               }`}
             >
               <img
-                alt='instagram icon'
-                src='image/ig.png'
-                className='w-[20px] h-[20px]'
+                alt="instagram icon"
+                src="image/ig.png"
+                className="w-[20px] h-[20px]"
               />
               <p>@raihanrafids</p>
             </div>
@@ -102,10 +104,10 @@ export default function BridePage() {
               : 'opacity-0 translate-y-[-30px]'
           }`}
         >
-          <h1 className='font-semibold text-[#5f443f] text-[20px]'>
+          <h1 className="font-semibold text-[#5f443f] text-[20px]">
             Raihan Rafid Adityo, S.Kom
           </h1>
-          <p className='text-[#5f443f]'>
+          <p className="text-[#5f443f]">
             Putra dari Bapak Irwanto Adi & Ibu Setyo Rini
           </p>
         </div>
