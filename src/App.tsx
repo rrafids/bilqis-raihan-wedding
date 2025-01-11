@@ -31,10 +31,10 @@ function App() {
 
   return (
     <div className='overflow-hidden'>
-      <audio ref={audioRef} loop>
+      {/* <audio ref={audioRef} loop>
         <source src='audio/you-are-still-the-one.mp3' type='audio/mp3' />
         Your browser does not support the audio element.
-      </audio>
+      </audio> */}
 
       {/* Conditional rendering for pages */}
       {isOpeningPageVisible ? (
