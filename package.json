@@ -24,7 +24,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "homepage": "https://rrafids.github.io/bilqis-raihan-wedding"
+    "homepage": "https://rrafids.github.io/bilqis-raihan-wedding/"
   },
   "eslintConfig": {
     "extends": [
