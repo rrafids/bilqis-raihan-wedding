@@ -1,5 +1,4 @@
-'use client';
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect } from 'react';
 
 // Define the type for the leaf object
 interface Leaf {
@@ -15,8 +14,8 @@ export default function OpeningPage() {
   const [step, setStep] = useState(0);
   const [leaves, setLeaves] = useState<Leaf[]>([]); // Specify that leaves is an array of Leaf objects
 
-  // Memoize the list of leaf icons to ensure immutability
-  const leafTypes = useMemo(() => ['🍂', '🍃', '🌿'], []);
+  // List of different leaf icons (you can replace these with custom image or other emojis)
+  const leafTypes = ['🍂', '🍃', '🌿'];
 
   useEffect(() => {
     // Trigger animation steps
@@ -41,8 +40,8 @@ export default function OpeningPage() {
       setLeaves(newLeaves);
     };
 
-    generateLeaves();
-  }, [leafTypes]); // Include leafTypes in the dependency array
+    generateLeaves(); // Only run once when the component mounts
+  }, []); // Empty dependency array ensures this only runs once on mount
 
   return (
     <div className='w-full min-h-screen flex flex-col justify-center items-center relative overflow-hidden bg-gray-300'>
@@ -107,20 +106,63 @@ export default function OpeningPage() {
             alt='bilqisfa-raihan'
             src='image/bilqisfa-raihan-clean.png'
           />
+
+          {/* <img
+            alt='bottom-left-gif'
+            src='gif/flower-bucket.gif' // Replace with the actual path to your GIF
+            className='absolute bottom-[-90px] right-[-90px] w-[200px] z-999 transform rotate-[50deg] opacity-75' // Added opacity
+          /> */}
         </div>
       </div>
 
-      {/* GIF Images for Decoration */}
+      {/* GIF Image positioned at top-left corner */}
       <img
         alt='top-left-gif'
-        src='gif/leaves.gif'
-        className='absolute top-[-75px] left-[-10px] w-[175px] h-[175px] z-999 transform rotate-[100deg] opacity-60'
+        src='gif/leaves.gif' // Replace with the actual path to your GIF
+        className='absolute top-[-75px] left-[-10px] w-[175px] h-[175px] z-999 transform rotate-[100deg] opacity-60' // Added opacity
       />
 
       <img
-        alt='top-right-gif'
-        src='gif/leaves.gif'
-        className='absolute top-[-75px] right-[-10px] w-[175px] h-[175px] z-999 transform rotate-[280deg] opacity-60'
+        alt='top-left-gif'
+        src='gif/leaves.gif' // Replace with the actual path to your GIF
+        className='absolute top-[-30px] left-[-70px] w-[175px] h-[175px] z-999 transform rotate-[20deg] opacity-65' // Added opacity
+      />
+
+      <img
+        alt='top-left-gif'
+        src='gif/leaves.gif' // Replace with the actual path to your GIF
+        className='absolute top-[50px] left-[-80px] w-[175px] h-[175px] z-999 transform rotate-[50deg] opacity-70' // Added opacity
+      />
+
+      {/* GIF gif positioned at top-right corner */}
+      <img
+        alt='top-left-gif'
+        src='gif/leaves.gif' // Replace with the actual path to your GIF
+        className='absolute top-[-75px] right-[-10px] w-[175px] h-[175px] z-999 transform rotate-[280deg] opacity-60' // Added opacity
+      />
+
+      <img
+        alt='top-left-gif'
+        src='gif/leaves.gif' // Replace with the actual path to your GIF
+        className='absolute top-[-30px] right-[-70px] w-[175px] h-[175px] z-999 transform rotate-[200deg] opacity-65' // Added opacity
+      />
+
+      <img
+        alt='top-left-gif'
+        src='gif/leaves.gif' // Replace with the actual path to your GIF
+        className='absolute top-[50px] right-[-80px] w-[175px] h-[175px] z-999 transform rotate-[230deg] opacity-70' // Added opacity
+      />
+
+      {/* <img
+        alt='bottom-left-gif'
+        src='gif/three-butterflies.gif' // Replace with the actual path to your GIF
+        className='absolute bottom-[150px] left-[-20px] w-[150px] h-[150px] z-999 transform rotate-[50deg] opacity-75' // Added opacity
+      /> */}
+
+      <img
+        alt='bottom-left-gif'
+        src='gif/butterfly.gif' // Replace with the actual path to your GIF
+        className='absolute bottom-[220px] left-[10px] w-[75px] z-999 transform rotate-[50deg] opacity-75' // Added opacity
       />
     </div>
   );

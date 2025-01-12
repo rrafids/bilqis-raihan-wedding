@@ -8,6 +8,8 @@ import GroomPage from './components/GroomPage';
 import InvitationDetailPage from './components/InvitationDetailPage';
 import GiftPage from './components/GiftPage';
 import ClosingPage from './components/ClosingPage';
+import KindWordPage from './components/KindWordPage';
+import AttendanceConfirmationPage from './components/AttendanceConfirmationPage';
 
 function Home() {
   const audioRef = useRef<HTMLAudioElement | null>(null);
@@ -54,17 +56,11 @@ function Home() {
 
           <GiftPage />
 
+          <KindWordPage />
+
+          <AttendanceConfirmationPage />
+
           <ClosingPage />
-
-          {/* <div>
-          <div>Gallery 1</div>
-          <div>Gallery 2</div>
-
-          <div>Sumbangan Page</div>
-
-          <div>Sweet words</div>
-
-          <div>Closing Invitation Page</div> */}
         </div>
       )}
     </div>

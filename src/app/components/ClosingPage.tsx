@@ -25,7 +25,7 @@ export default function ClosingPage() {
 
         <div className='flex flex-col items-center mt-[30px] space-y-5'>
           <div className='flex flex-col items-center space-y-1'>
-            <h1 className='text-[#855f58] text-[17px] italic'>#meRAjutQISih</h1>
+            <h1 className='text-[#855f58] text-[17px] italic'>#meRAjutQISah</h1>
           </div>
         </div>
       </div>
