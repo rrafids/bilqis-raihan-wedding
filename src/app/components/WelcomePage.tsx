@@ -48,8 +48,8 @@ export default function OpeningPage() {
       {/* Background Image */}
       <img
         alt='border gif'
-        src='image/bg-flowers-pink.png'
-        className='absolute top-0 left-0 w-max h-screen object-cover'
+        src='image/bg-1.png'
+        className='absolute top-0 left-0 w-max h-screen object-cover bg-opacity-80'
       />
 
       {/* Falling Leaves */}
@@ -74,7 +74,7 @@ export default function OpeningPage() {
         <div className='space-y-[-15px]'>
           {/* Step 1: "The Wedding of" */}
           <p
-            className={`text-[17px] text-[#855f58] font-serif transform transition-all duration-[1.5s] ease-in-out ${
+            className={`text-[22px] text-[#855f58] font-cormorant-garamond transform transition-all duration-[1.5s] ease-in-out ${
               step >= 1
                 ? 'translate-y-0 opacity-100'
                 : 'translate-y-10 opacity-0'
@@ -107,11 +107,13 @@ export default function OpeningPage() {
             src='image/bilqisfa-raihan-clean.png'
           />
 
-          {/* <img
-            alt='bottom-left-gif'
-            src='gif/flower-bucket.gif' // Replace with the actual path to your GIF
-            className='absolute bottom-[-90px] right-[-90px] w-[200px] z-999 transform rotate-[50deg] opacity-75' // Added opacity
-          /> */}
+          <div className='flex flex-col items-center mt-[30px] space-y-5'>
+            <div className='flex flex-col items-center space-y-1'>
+              <h1 className='text-[#855f58] rounded-lg bg-opacity-40 px-3 font-cormorant-garamond text-[18px]'>
+                #meRAjutQISah
+              </h1>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -158,12 +160,6 @@ export default function OpeningPage() {
         src='gif/three-butterflies.gif' // Replace with the actual path to your GIF
         className='absolute bottom-[150px] left-[-20px] w-[150px] h-[150px] z-999 transform rotate-[50deg] opacity-75' // Added opacity
       /> */}
-
-      <img
-        alt='bottom-left-gif'
-        src='gif/butterfly.gif' // Replace with the actual path to your GIF
-        className='absolute bottom-[220px] left-[10px] w-[75px] z-999 transform rotate-[50deg] opacity-75' // Added opacity
-      />
     </div>
   );
 }

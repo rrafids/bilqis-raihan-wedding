@@ -31,7 +31,7 @@ export default function PrayerPage() {
   return (
     <div
       ref={prayerRef}
-      className='w-full min-h-screen flex flex-col justify-top relative overflow-hidden bg-gray-300 p-5 font-serif'
+      className='w-full min-h-screen flex flex-col justify-top relative overflow-hidden bg-gray-300 p-5 font-cormorant-garamond'
     >
       <img
         alt='border gif'
@@ -39,9 +39,9 @@ export default function PrayerPage() {
         className='absolute top-0 left-0 w-max h-screen object-cover'
       />
 
-      <div className='absolute top-[50px] space-y-3'>
+      <div className='absolute top-[50px] space-y-3 pe-3'>
         <h1
-          className={`text-[#855f58] text-[35px] z-100 transition-all duration-[2000ms] ${
+          className={`text-[#855f58] text-right pe-5 mt-3 text-[25px] z-100 transition-all duration-[2000ms] ${
             isVisible
               ? 'opacity-100 translate-y-0'
               : 'opacity-0 translate-y-[-30px]'
@@ -53,7 +53,7 @@ export default function PrayerPage() {
         </h1>
 
         <p
-          className={`text-[17px] italic text-[#5f443f] transition-all duration-[2000ms] delay-[500ms] ${
+          className={`text-[17px] p-3 italic text-[#5f443f] transition-all duration-[2000ms] delay-[500ms] ${
             isVisible
               ? 'opacity-100 translate-y-0'
               : 'opacity-0 translate-y-[-30px]'
@@ -67,7 +67,7 @@ export default function PrayerPage() {
         </p>
 
         <h1
-          className={`text-[17px] text-[#845c56] italic mt-3 transition-all duration-[2000ms] delay-[1000ms] ${
+          className={`p-3 text-[17px] text-[#845c56] italic mt-3 transition-all duration-[2000ms] delay-[1000ms] ${
             isVisible
               ? 'opacity-100 translate-y-0'
               : 'opacity-0 translate-y-[-30px]'

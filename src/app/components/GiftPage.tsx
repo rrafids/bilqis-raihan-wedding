@@ -37,7 +37,7 @@ export default function GiftPage() {
   return (
     <div
       ref={giftRef}
-      className='w-full items-center min-h-screen flex flex-col justify-top relative overflow-hidden bg-gray-300 p-5 font-serif pt-[50px]'
+      className='w-full items-center min-h-screen flex flex-col justify-top relative overflow-hidden bg-gray-300 p-5 font-cormorant-garamond pt-[50px]'
     >
       {/* Background Image */}
       <img
@@ -63,7 +63,7 @@ export default function GiftPage() {
 
         {/* Description */}
         <p
-          className={`text-center w-[350px] text-gray-500 font-serif transition-all duration-1000 delay-200 ${
+          className={`text-center w-[350px] text-gray-500 font-cormorant-garamond transition-all duration-1000 delay-200 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
@@ -74,7 +74,7 @@ export default function GiftPage() {
 
         {/* Bank BCA Details */}
         <div
-          className={`text-center mt-10 font-serif space-y-2 transition-all duration-1000 delay-400 ${
+          className={`text-center mt-10 font-cormorant-garamond space-y-2 transition-all duration-1000 delay-400 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
@@ -97,7 +97,7 @@ export default function GiftPage() {
 
         {/* E-Wallet Details */}
         <div
-          className={`text-center mt-5 font-serif space-y-2 transition-all duration-1000 delay-600 ${
+          className={`text-center mt-5 font-cormorant-garamond space-y-2 transition-all duration-1000 delay-600 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >

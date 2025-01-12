@@ -30,14 +30,14 @@ export default function BridePage() {
   return (
     <div
       ref={brideRef}
-      className='w-full min-h-screen flex flex-col justify-top relative overflow-hidden bg-gray-300 p-5 font-serif pt-[50px]'
+      className='w-full min-h-screen flex flex-col justify-top relative overflow-hidden p-3 font-cormorant-garamond pt-[50px] bg-gray-300'
     >
       <img
         alt='border gif'
         src='image/bg-flower-light.png'
         className='absolute top-0 left-0 w-full h-screen object-cover'
       />
-      <div className='absolute'>
+      <div className='absolute w-full'>
         <div className='flex w-full items-center justify-center'>
           <svg
             xmlns='http://www.w3.org/2000/svg'
@@ -59,7 +59,7 @@ export default function BridePage() {
             </switch>
           </svg>
         </div>
-        <div className='text-[#644742] mt-[40px] italic'>
+        <div className='text-[#644742] pe-3 mt-[40px] italic'>
           <p
             className={`text-center transition-all duration-[2000ms] ${
               isVisible
@@ -67,12 +67,21 @@ export default function BridePage() {
                 : 'opacity-0 translate-y-[-30px]'
             }`}
           >
-            Kami mengundang Bapak/Ibu/Saudara/i ke acara akad nikah:
+            Kami mengundang Bapak/Ibu/Saudara/i ke acara
+          </p>
+          <p
+            className={`text-center transition-all duration-[2000ms] ${
+              isVisible
+                ? 'opacity-100 translate-y-0'
+                : 'opacity-0 translate-y-[-30px]'
+            }`}
+          >
+            akad nikah:
           </p>
         </div>
 
-        <div className='mt-[50px] grid grid-cols-3'>
-          <div className='col-span-2'>
+        <div className='mt-[50px] grid grid-cols-2 w-full'>
+          <div className='col-span-1'>
             <img
               alt='the bride img'
               src='image/the-bride-half.png'
@@ -99,15 +108,15 @@ export default function BridePage() {
             </div>
           </div>
 
-          <div className='flex flex-col items-center place-content-center text-right pl-3 pr-10 space-y-[-10px]'>
+          <div className='w-full font-tangerine col-span-1 flex flex-col place-content-center text-right space-y-[-10px] pe-7'>
             <h1
-              className={`transition-all duration-[2000ms] delay-[1000ms] ${
+              className={`text-[30px] text-[#5f443f] italic transition-all duration-[2000ms] delay-[1000ms] ${
                 isVisible
                   ? 'opacity-100 translate-y-0'
                   : 'opacity-0 translate-y-[-30px]'
               }`}
             >
-              The Bride
+              Mempelai Wanita
             </h1>
             <h1
               className={`text-[#5f443f] font-royal-wedding text-[75px] transition-all duration-[2000ms] delay-[1500ms] ${
@@ -122,7 +131,7 @@ export default function BridePage() {
         </div>
 
         <div
-          className={`mt-[20px] flex flex-col items-end space-y-2 py-2 px-3  rounded-l-xl transition-all duration-[2000ms] delay-[2000ms] ${
+          className={`mt-[20px] me-3 flex flex-col items-end space-y-2 py-2 px-3  rounded-l-xl transition-all duration-[2000ms] delay-[2000ms] ${
             isVisible
               ? 'opacity-100 translate-y-0'
               : 'opacity-0 translate-y-[-30px]'

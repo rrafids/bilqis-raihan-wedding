@@ -33,36 +33,43 @@ function Home() {
   });
 
   return (
-    <div className='overflow-hidden'>
-      {/* <audio ref={audioRef} loop>
-        <source src='audio/you-are-still-the-one.mp3' type='audio/mp3' />
-        Your browser does not support the audio element.
-      </audio> */}
+    <div
+      className='flex flex-col items-center'
+      style={{ backgroundImage: "url('image/bg-bg-flower.png)" }}
+    >
+      <div className='overflow-hidden w-full max-w-[450px] '>
+        {/* <audio ref={audioRef} loop>
+          <source src='audio/you-are-still-the-one.mp3' type='audio/mp3' />
+          Your browser does not support the audio element.
+        </audio> */}
 
-      {/* Conditional rendering for pages */}
-      {isOpeningPageVisible ? (
-        <OpeningPage onOpenInvitation={() => setIsOpeningPageVisible(false)} />
-      ) : (
-        <div className='transition-opacity duration-1000 ease-in-out opacity-100'>
-          <WelcomePage />
+        {/* Conditional rendering for pages */}
+        {isOpeningPageVisible ? (
+          <OpeningPage
+            onOpenInvitation={() => setIsOpeningPageVisible(false)}
+          />
+        ) : (
+          <div className='transition-opacity duration-1000 ease-in-out opacity-100'>
+            <WelcomePage />
 
-          <PrayerPage />
+            <PrayerPage />
 
-          <BridePage />
+            <BridePage />
 
-          <GroomPage />
+            <GroomPage />
 
-          <InvitationDetailPage />
+            <InvitationDetailPage />
 
-          <GiftPage />
+            <GiftPage />
 
-          <KindWordPage />
+            <KindWordPage />
 
-          <AttendanceConfirmationPage />
+            <AttendanceConfirmationPage />
 
-          <ClosingPage />
-        </div>
-      )}
+            <ClosingPage />
+          </div>
+        )}
+      </div>
     </div>
   );
 }

@@ -30,7 +30,7 @@ export default function InvitationDetailPage() {
   return (
     <div
       ref={detailRef}
-      className='w-full items-center min-h-screen flex flex-col justify-top relative overflow-hidden bg-gray-300 p-5 font-serif pt-[50px]'
+      className='w-full items-center min-h-screen flex flex-col justify-top relative overflow-hidden bg-gray-300 p-5 font-cormorant-garamond pt-[50px]'
     >
       <img
         alt='border gif'
@@ -87,7 +87,7 @@ export default function InvitationDetailPage() {
           Akad
         </p>
         <p
-          className={`font-serif font-semibold text-[#5f443f] transition-all duration-[3000ms] delay-[2000ms] ${
+          className={`font-cormorant-garamond font-semibold text-[#5f443f] transition-all duration-[3000ms] delay-[2000ms] ${
             isVisible
               ? 'opacity-100 translate-y-0'
               : 'opacity-0 translate-y-[-30px]'
@@ -106,7 +106,7 @@ export default function InvitationDetailPage() {
         </p>
 
         <p
-          className={`font-serif font-semibold text-[#5f443f] mt-[20px] transition-all duration-[3000ms] delay-[3000ms] ${
+          className={`font-cormorant-garamond font-semibold text-[#5f443f] mt-[20px] transition-all duration-[3000ms] delay-[3000ms] ${
             isVisible
               ? 'opacity-100 translate-y-0'
               : 'opacity-0 translate-y-[-30px]'

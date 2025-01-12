@@ -13,6 +13,31 @@
   src: local('Times New Roman'),
     url('../assets/fonts/times-new-roman.ttf') format('truetype');
 }
+
+@font-face {
+  font-family: 'cormorant-garamond';
+  src: local('Cormorant Garamond'),
+    url('../assets/fonts/cormorant-garamond.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'josefin-sans';
+  src: local('Josefin Sans'),
+    url('../assets/fonts/josefin-sans.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'quickpen';
+  src: local('Quickpen'),
+    url('../assets/fonts/quickpen.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'tangerine';
+  src: local('Tangerine'),
+    url('../assets/fonts/tangerine.ttf') format('truetype');
+}
+
 /* Falling Leaves Animation */
 .leaf {
   position: absolute;
