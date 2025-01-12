@@ -1,8 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import db from '../../../configuration';
 
 export default function KindWordPage() {
   const [recipientName, setRecipientName] = useState<string>('');
+  const [isVisible, setIsVisible] = useState(false);
+  const [showThankYou, setShowThankYou] = useState(false);
+  const formRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
@@ -12,6 +15,29 @@ export default function KindWordPage() {
     } else {
       setRecipientName('Guest');
     }
+  }, []);
+
+  useEffect(() => {
+    // Observer for animation
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.3 } // Trigger when 30% is visible
+    );
+
+    const currentFormRef = formRef.current;
+    if (currentFormRef) {
+      observer.observe(currentFormRef);
+    }
+
+    return () => {
+      if (currentFormRef) {
+        observer.unobserve(currentFormRef);
+      }
+    };
   }, []);
 
   const confirmAttendance = (e: any, isAttend: boolean) => {
@@ -33,41 +59,56 @@ export default function KindWordPage() {
     const newMessage = {
       sender: sender,
       isAttend: isAttend,
-      timestamp: formattedDate, // Optional: Add a timestamp
+      timestamp: formattedDate,
     };
 
     ref.once('value', (snapshot) => {
       const messages = snapshot.val() || [];
       ref.set([...messages, newMessage]); // Overwrite with updated array
+      setShowThankYou(true); // Show thank-you message
     });
   };
 
   return (
-    <div className='text-[#855f58] w-full min-h-screen items-center place-content-center flex flex-col justify-top relative font-cormorant-garamond pt-[50px] bg-gray-300'>
+    <div className='text-[#855f58] w-full min-h-screen items-center flex flex-col justify-top relative font-cormorant-garamond bg-gray-300'>
       <img
         alt='border gif'
         src='image/letter.png'
         className='absolute top-0 left-0 w-full h-screen object-cover'
       />
-      <div className='absolute w-full p-10 flex flex-col items-center'>
-        <div className='flex flex-col items-center space-y-5'>
-          <h1 className='font-tangerine text-[40px] mt-[50px]'>
-            Konfirmasi Kehadiran
-          </h1>
-          <div className='flex space-x-2'>
-            <button
-              className='bg-[#855f58] text-white px-5 py-2 rounded-full'
-              onClick={(e) => confirmAttendance(e, true)}
-            >
-              Hadir
-            </button>
-            <button
-              className='bg-[#855f58] text-white px-5 py-2 rounded-full'
-              onClick={(e) => confirmAttendance(e, false)}
-            >
-              Tidak Hadir
-            </button>
-          </div>
+      <div className='absolute w-full h-full p-5 flex flex-col items-center justify-center mt-[-50px]'>
+        <img alt='border gif' src='image/dear-you.png' className='w-[150px]' />
+        <div
+          ref={formRef}
+          className={`flex flex-col items-center justify-center space-y-5 mt-[-30px] pt-[-80px] transition-all duration-1000 ${
+            isVisible
+              ? 'opacity-100 translate-y-0'
+              : 'opacity-0 translate-y-[30px]'
+          }`}
+        >
+          <h1 className='font-tangerine text-[40px]'>Konfirmasi Kehadiran</h1>
+          {!showThankYou ? (
+            <div className='flex space-x-2'>
+              <button
+                className='bg-[#855f58] text-white px-5 py-2 rounded-full'
+                onClick={(e) => confirmAttendance(e, true)}
+              >
+                Hadir
+              </button>
+              <button
+                className='bg-[#855f58] text-white px-5 py-2 rounded-full'
+                onClick={(e) => confirmAttendance(e, false)}
+              >
+                Tidak Hadir
+              </button>
+            </div>
+          ) : (
+            <div className='text-center text-[#855f58] mt-5'>
+              <h2 className='text-xl font-semibold'>
+                Thank you for the confirmation!
+              </h2>
+            </div>
+          )}
         </div>
       </div>
     </div>

@@ -37,24 +37,24 @@ export default function GiftPage() {
   return (
     <div
       ref={giftRef}
-      className='w-full items-center min-h-screen flex flex-col justify-top relative overflow-hidden bg-gray-300 p-5 font-cormorant-garamond pt-[50px]'
+      className='w-full items-center min-h-screen flex flex-col justify-top relative overflow-hidden bg-gray-400 p-5 font-cormorant-garamond pt-[50px]'
     >
       {/* Background Image */}
       <img
         alt='gift page bg'
-        src='image/gift-page-bg.png'
-        className='absolute top-0 left-0 w-full h-screen object-cover'
+        src='image/sea-flower-bg.png'
+        className='absolute top-3 left-0 w-full h-screen object-cover'
       />
 
       {/* Content Section */}
       <div
-        className={`absolute flex flex-col items-center mt-[100px] transition-all duration-1000 ${
+        className={`ml-[-60px] absolute flex flex-col items-center mt-[120px] transition-all duration-1000 ${
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}
       >
         {/* Title */}
         <h1
-          className={`text-[#5f443f] font-royal-wedding text-[75px] transition-opacity duration-1000 ${
+          className={`text-[#5f443f] font-tangerine text-[50px] transition-opacity duration-1000 ${
             isVisible ? 'opacity-100' : 'opacity-0'
           }`}
         >
@@ -113,6 +113,28 @@ export default function GiftPage() {
               }`}
             >
               {copiedText === '082240237910' ? 'Copied!' : 'Copy'}
+            </button>
+          </div>
+        </div>
+
+        {/* Paypal Details */}
+        <div
+          className={`text-center mt-5 font-cormorant-garamond space-y-2 transition-all duration-1000 delay-600 ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          }`}
+        >
+          <p className='text-[#5f443f] font-semibold'>Paypal</p>
+          <div className='flex items-center justify-center space-x-2'>
+            <p className='text-gray-500'>@RaihanRafid</p>
+            <button
+              onClick={() => handleCopy('@RaihanRafid')}
+              className={`bg-[#5f443f] text-white px-3 py-1 rounded-full text-sm transition-transform duration-300 ${
+                copiedText === '@RaihanRafid'
+                  ? 'scale-105 bg-green-500'
+                  : 'hover:scale-110'
+              }`}
+            >
+              {copiedText === '@RaihanRafid' ? 'Copied!' : 'Copy'}
             </button>
           </div>
         </div>
