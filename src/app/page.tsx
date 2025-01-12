@@ -8,7 +8,7 @@ import GroomPage from './components/GroomPage';
 import InvitationDetailPage from './components/InvitationDetailPage';
 import GiftPage from './components/GiftPage';
 import ClosingPage from './components/ClosingPage';
-import KindWordPage from './components/KindWordPage';
+// import KindWordPage from './components/KindWordPage';
 import AttendanceConfirmationPage from './components/AttendanceConfirmationPage';
 
 function Home() {
@@ -35,13 +35,13 @@ function Home() {
   return (
     <div
       className='flex flex-col items-center'
-      style={{ backgroundImage: "url('image/bg-bg-flower.png)" }}
+      style={{ backgroundImage: 'image/bg-bw-flower.png' }}
     >
       <div className='overflow-hidden w-full max-w-[450px] '>
-        {/* <audio ref={audioRef} loop>
+        <audio ref={audioRef} loop>
           <source src='audio/you-are-still-the-one.mp3' type='audio/mp3' />
           Your browser does not support the audio element.
-        </audio> */}
+        </audio>
 
         {/* Conditional rendering for pages */}
         {isOpeningPageVisible ? (
@@ -62,7 +62,7 @@ function Home() {
 
             <GiftPage />
 
-            <KindWordPage />
+            {/* <KindWordPage /> */}
 
             <AttendanceConfirmationPage />
 

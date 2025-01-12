@@ -1,5 +1,7 @@
+// KindWordPage.tsx
 import React, { useEffect, useState, useRef } from 'react';
-import db from '../../../configuration';
+import db from '../../../firebaseConfig';
+import { ref, set } from 'firebase/database';
 
 export default function KindWordPage() {
   const [recipientName, setRecipientName] = useState<string>('');
@@ -42,7 +44,7 @@ export default function KindWordPage() {
   const createMessage = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const params = new URLSearchParams(window.location.search);
-    const sender = params.get('to');
+    let sender = params.get('to');
 
     const formattedDate = new Intl.DateTimeFormat('en-GB', {
       timeZone: 'Asia/Jakarta', // GMT+7 timezone
@@ -53,22 +55,24 @@ export default function KindWordPage() {
       minute: 'numeric',
       second: 'numeric',
     }).format(new Date());
+    if (db) {
+      if (sender === null) {
+        sender = 'Guest';
+      }
 
-    const ref = db.ref('messages');
-    const newMessage = {
-      sender: sender,
-      message: (e.target as any).message.value,
-      timestamp: formattedDate,
-    };
+      sender += '-' + Math.floor(new Date().getTime() / 1000);
 
-    ref.once('value', (snapshot) => {
-      const messages = snapshot.val() || [];
-      ref.set([...messages, newMessage]);
-      setShowThankYou(true); // Show thank-you message
-    });
+      const newMessage = {
+        sender: sender,
+        message: (e.target as any).message.value,
+        timestamp: formattedDate,
+      };
 
-    // Optionally clear the form
-    (e.target as any).reset();
+      set(ref(db, 'messages/' + sender), newMessage);
+      setShowThankYou(true);
+    } else {
+      console.error('Firebase db is not initialized');
+    }
   };
 
   return (
