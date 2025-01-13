@@ -15,7 +15,7 @@ export default function ClosingPage({ language }: ClosingPageProps) {
 
       <div className='z-10 flex flex-col items-center'>
         <p className='font-cormorant-garamond text-[#855f58] text-[20px]'>
-          The Wedding of
+          {language == 'en' ? 'The Wedding of' : 'Pernikahan'}
         </p>
         <div className='flex flex-col space-y-[-50px] items-center'>
           <span className='text-[#855f58] font-royal-wedding text-[80px]'>

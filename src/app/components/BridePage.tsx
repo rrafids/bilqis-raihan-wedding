@@ -71,7 +71,9 @@ export default function BridePage({ language }: BridePageProps) {
                 : 'opacity-0 translate-y-[-30px]'
             }`}
           >
-            Kami mengundang Bapak/Ibu/Saudara/i ke acara
+            {language == 'en'
+              ? "We're inviting you to our"
+              : 'Kami mengundang Bapak/Ibu/Saudara/i ke acara'}
           </p>
           <p
             className={`text-center transition-all duration-[2000ms] ${
@@ -80,7 +82,7 @@ export default function BridePage({ language }: BridePageProps) {
                 : 'opacity-0 translate-y-[-30px]'
             }`}
           >
-            akad nikah:
+            {language == 'en' ? 'wedding event:' : 'akad nikah:'}
           </p>
         </div>
 
@@ -120,7 +122,7 @@ export default function BridePage({ language }: BridePageProps) {
                   : 'opacity-0 translate-y-[-30px]'
               }`}
             >
-              Mempelai Wanita
+              {language == 'en' ? 'The Bride' : 'Mempelai Wanita'}
             </h1>
             <h1
               className={`text-[#5f443f] font-royal-wedding text-[75px] transition-all duration-[2000ms] delay-[1500ms] ${
@@ -145,7 +147,9 @@ export default function BridePage({ language }: BridePageProps) {
             Aulia Bilqisfa Az Zahra, S.Psi
           </h1>
           <p className='text-[#5f443f]'>
-            Putri Pertama dari Bapak Gatot Kaca & Ibu Teti Kurniati
+            {language == 'en'
+              ? 'First Daughter of Mr. Gatot Kaca & Mrs. Teti Kurniati'
+              : 'Putri Pertama dari Bapak Gatot Kaca & Ibu Teti Kurniati'}
           </p>
         </div>
       </div>

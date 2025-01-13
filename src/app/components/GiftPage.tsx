@@ -62,7 +62,7 @@ export default function GiftPage({ language }: GiftPageProps) {
             isVisible ? 'opacity-100' : 'opacity-0'
           }`}
         >
-          Tanda Kasih
+          {language == 'en' ? 'Love Gift' : 'Tanda Kasih'}
         </h1>
 
         {/* Description */}
@@ -71,9 +71,9 @@ export default function GiftPage({ language }: GiftPageProps) {
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
-          Doa restu dan kehadiran Bapak/Ibu/Saudara/i di pernikahan kami sudah
-          lebih dari cukup bagi kami. Namun, jika berkenan memberikan hadiah,
-          kami telah menyediakan amplop digital. Terima kasih.
+          {language == 'en'
+            ? 'Your blessings and presence at our wedding are more than enough for us. However, if you wish to give a gift, we have provided a digital envelope for your convenience. Thank you.'
+            : 'Doa restu dan kehadiran Bapak/Ibu/Saudara/i di pernikahan kami sudah lebih dari cukup bagi kami. Namun, jika berkenan memberikan hadiah, kami telah menyediakan amplop digital. Terima kasih.'}
         </p>
 
         {/* Bank BCA Details */}

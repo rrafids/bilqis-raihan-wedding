@@ -91,7 +91,7 @@ export default function InvitationDetailPage({
               : 'opacity-0 translate-y-[-30px]'
           }`}
         >
-          Akad Nikah
+          {language == 'en' ? 'The Wedding' : 'Akad Nikah'}
         </p>
         <div className='flex flex-col items-center mt-[20px]'>
           <div className='flex flex-col items-center space-y-2'>
@@ -110,7 +110,9 @@ export default function InvitationDetailPage({
                   : 'opacity-0 translate-y-[-30px]'
               }`}
             >
-              Sabtu, 8 Februari 2025
+              {language == 'en'
+                ? 'Saturday, 8 February 2025'
+                : 'Sabtu, 8 Februari 2025'}
             </p>
             <p
               className={`text-[17px] font-cormorant-garamond text-[#5f443f] transition-all duration-[3000ms] delay-[2500ms] ${
@@ -119,7 +121,9 @@ export default function InvitationDetailPage({
                   : 'opacity-0 translate-y-[-30px]'
               }`}
             >
-              08.00 - selesai
+              {language == 'en'
+                ? '8 AM Jakarta - finish'
+                : '08.00 WIB - selesai'}
             </p>
           </div>
           <div className='flex flex-col items-center mt-[30px] font-cormorant-garamond'>
@@ -138,7 +142,7 @@ export default function InvitationDetailPage({
                   : 'opacity-0 translate-y-[-30px]'
               }`}
             >
-              RM. Ponyo Nagreg
+              {language == 'en' ? 'Ponyo Nagreg Restaurant' : 'RM Ponyo Nagreg'}
             </p>
             <p
               className={`text-[15px] text-center mt-3 transition-all duration-[3000ms] delay-[3500ms] ${
@@ -186,7 +190,10 @@ export default function InvitationDetailPage({
                   : 'opacity-0 translate-y-[-30px]'
               }`}
             >
-              (Resepsi akan dilaksanakan di Purwokerto)
+              ()
+              {language == 'en'
+                ? 'Wedding party will be hel in Purwokerto'
+                : 'Resepsi akan dilaksanakan di Purwokerto'}
             </p>
           </div>
         </div>

@@ -112,7 +112,7 @@ export default function WelcomePage({ language }: WelcomePageProps) {
 
           <div className='flex flex-col items-center mt-[30px] space-y-5'>
             <div className='flex flex-col items-center space-y-1'>
-              <h1 className='text-[#855f58] rounded-lg bg-opacity-40 px-3 font-cormorant-garamond text-[18px]'>
+              <h1 className='italic text-[#855f58] rounded-lg bg-opacity-40 px-3 font-cormorant-garamond text-[18px]'>
                 #meRAjutQISah
               </h1>
             </div>

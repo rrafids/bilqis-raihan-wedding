@@ -100,26 +100,30 @@ export default function AttendanceConfirmationPage({
               : 'opacity-0 translate-y-[30px]'
           }`}
         >
-          <h1 className='font-tangerine text-[40px]'>Konfirmasi Kehadiran</h1>
+          <h1 className='font-tangerine text-[40px]'>
+            {language == 'en' ? 'Confirm Attendance' : 'Konfirmasi Kehadiran'}
+          </h1>
           {!showThankYou ? (
             <div className='flex space-x-2'>
               <button
                 className='bg-[#855f58] text-white px-5 py-2 rounded-full'
                 onClick={(e) => confirmAttendance(e, true)}
               >
-                Hadir
+                {language == 'en' ? 'Attend' : 'Hadir'}
               </button>
               <button
                 className='bg-[#855f58] text-white px-5 py-2 rounded-full'
                 onClick={(e) => confirmAttendance(e, false)}
               >
-                Tidak Hadir
+                {language == 'en' ? 'Not Attend' : 'Tidak Hadir'}
               </button>
             </div>
           ) : (
             <div className='text-center text-[#855f58] mt-5'>
               <h2 className='text-xl font-semibold'>
-                Thank you for the confirmation!
+                {language == 'en'
+                  ? 'Thank you for the confirmation!'
+                  : 'Terimakasih atas konfirmasinya!'}
               </h2>
             </div>
           )}

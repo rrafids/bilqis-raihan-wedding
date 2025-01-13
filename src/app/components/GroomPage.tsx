@@ -61,7 +61,7 @@ export default function BridePage({ language }: GroomPageProps) {
                   : 'opacity-0 translate-y-[-30px]'
               }`}
             >
-              Mempelai Pria
+              {language == 'en' ? 'The Groom' : 'Mempelai Pria'}
             </h1>
             <h1
               className={`text-[#5f443f] font-royal-wedding text-[75px] transition-all duration-[2000ms] delay-[1500ms] ${
@@ -112,7 +112,9 @@ export default function BridePage({ language }: GroomPageProps) {
             Raihan Rafid Adityo, S.Kom
           </h1>
           <p className='text-[#5f443f]'>
-            Putra Pertama dari Bapak Irwanto Adi & Ibu Setyo Rini
+            {language == 'en'
+              ? 'First Son of Mr. Irwanto Adi & Mrs. Setyo Rini'
+              : 'Putra Pertama dari Bapak Irwanto Adi & Ibu Setyo Rini'}
           </p>
         </div>
       </div>

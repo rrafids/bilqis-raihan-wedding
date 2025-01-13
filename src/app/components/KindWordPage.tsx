@@ -87,7 +87,9 @@ export default function KindWordPage({ language }: KindWordPageProps) {
         className='absolute top-0 left-0 w-full h-screen object-cover'
       />
       <div className='absolute w-full p-[50px] flex flex-col items-center'>
-        <h1 className='font-tangerine text-[50px] mt-[90px]'>Doa & Ucapan</h1>
+        <h1 className='font-tangerine text-[50px] mt-[90px]'>
+          {language == 'en' ? 'Wish & Prayer' : 'Doa & Ucapan'}
+        </h1>
         <div
           ref={formRef}
           className={`flex flex-col space-y-3 w-full mt-10 transition-all duration-1000 ${
@@ -99,13 +101,15 @@ export default function KindWordPage({ language }: KindWordPageProps) {
           {showThankYou ? (
             <div className='text-center text-[#855f58] mt-5'>
               <h2 className='text-xl font-semibold'>
-                Thank you for the message!
+                {language == 'en'
+                  ? 'Thank you for the message!'
+                  : 'Terimakasih atas pesannya!'}
               </h2>
             </div>
           ) : (
             <form onSubmit={createMessage} className='space-y-3'>
               <div>
-                <label>Nama</label>
+                <label>{language == 'en' ? 'Name' : 'Nama'}</label>
                 <input
                   placeholder='Nama'
                   defaultValue={recipientName}
@@ -114,7 +118,11 @@ export default function KindWordPage({ language }: KindWordPageProps) {
               </div>
 
               <div>
-                <label>Beri Doa & Ucapan...</label>
+                <label>
+                  {language == 'en'
+                    ? 'Send wish & prayer'
+                    : 'Beri Doa & Ucapan...'}
+                </label>
                 <textarea
                   name='message'
                   className='p-3 w-full rounded-lg opacity-70'
@@ -125,7 +133,7 @@ export default function KindWordPage({ language }: KindWordPageProps) {
                 type='submit'
                 className='bg-[#855f58] text-white py-2 rounded-full w-max px-7 float-right'
               >
-                Kirim
+                {language == 'en' ? 'Send' : 'Kirim'}
               </button>
             </form>
           )}
