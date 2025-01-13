@@ -8,7 +8,7 @@ import GroomPage from './components/GroomPage';
 import InvitationDetailPage from './components/InvitationDetailPage';
 import GiftPage from './components/GiftPage';
 import ClosingPage from './components/ClosingPage';
-// import KindWordPage from './components/KindWordPage';
+import KindWordPage from './components/KindWordPage';
 import AttendanceConfirmationPage from './components/AttendanceConfirmationPage';
 
 function Home() {
@@ -62,7 +62,7 @@ function Home() {
 
             <GiftPage />
 
-            {/* <KindWordPage /> */}
+            <KindWordPage />
 
             <AttendanceConfirmationPage />
 

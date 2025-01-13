@@ -141,7 +141,7 @@ export default function BridePage() {
             Aulia Bilqisfa Az Zahra, S.Psi
           </h1>
           <p className='text-[#5f443f]'>
-            Putri dari Bapak Gatot Kaca & Ibu Teti Kurniati
+            Putri Pertama dari Bapak Gatot Kaca & Ibu Teti Kurniati
           </p>
         </div>
       </div>

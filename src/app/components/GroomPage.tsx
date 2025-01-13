@@ -108,7 +108,7 @@ export default function BridePage() {
             Raihan Rafid Adityo, S.Kom
           </h1>
           <p className='text-[#5f443f]'>
-            Putra dari Bapak Irwanto Adi & Ibu Setyo Rini
+            Putra Pertama dari Bapak Irwanto Adi & Ibu Setyo Rini
           </p>
         </div>
       </div>

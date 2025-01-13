@@ -37,7 +37,7 @@ export default function GiftPage() {
   return (
     <div
       ref={giftRef}
-      className='w-full items-center min-h-screen flex flex-col justify-top relative overflow-hidden bg-gray-400 p-5 font-cormorant-garamond pt-[50px]'
+      className='w-full items-center min-h-screen flex flex-col justify-top relative overflow-hidden bg-[#CFCCC4] p-5 font-cormorant-garamond pt-[50px]'
     >
       {/* Background Image */}
       <img
