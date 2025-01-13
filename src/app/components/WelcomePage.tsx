@@ -51,7 +51,7 @@ export default function WelcomePage({ language }: WelcomePageProps) {
       {/* Background Image */}
       <img
         alt='border gif'
-        src='image/bg-1.png'
+        src='image/bg-ats.png'
         className='absolute top-0 left-0 w-max h-screen object-cover bg-opacity-80'
       />
 
@@ -73,7 +73,7 @@ export default function WelcomePage({ language }: WelcomePageProps) {
       ))}
 
       {/* Content */}
-      <div className='flex flex-col absolute h-screen mt-[-150px] items-center place-content-center z-10 p-4 text-center font-bold'>
+      <div className='flex flex-col absolute h-screen mt-[-100px] items-center place-content-center z-10 p-4 text-center font-bold'>
         <div className='space-y-[-15px]'>
           {/* Step 1: "The Wedding of" */}
           <p
@@ -88,7 +88,7 @@ export default function WelcomePage({ language }: WelcomePageProps) {
 
           {/* Step 2: "Bilqis & Raihan" */}
           <h1
-            className={`mt-[20px] text-[#855f58] font-medium font-royal-wedding text-[75px] transform transition-all duration-[1.5s] ease-in-out ${
+            className={`pt-[10px] text-[#855f58] font-medium font-royal-wedding text-[75px] transform transition-all duration-[1.5s] ease-in-out ${
               step >= 2
                 ? 'translate-y-0 opacity-100'
                 : 'translate-y-10 opacity-0'
@@ -97,6 +97,7 @@ export default function WelcomePage({ language }: WelcomePageProps) {
             Bilqis & Raihan
           </h1>
         </div>
+
         {/* Step 3: Image */}
         <div
           className={`relative transform transition-all duration-[1.5s] ease-in-out ${
@@ -105,13 +106,19 @@ export default function WelcomePage({ language }: WelcomePageProps) {
         >
           {/* Main Image */}
           <img
-            className='border-4 border-opacity-50 border-white rounded-[100px] z-10 sm:w-[400px] w-[230px]'
+            className='border-opacity-75 shadow-2xl border-[#855f58] rounded-[100px] z-10 sm:w-[400px] w-[230px]'
             alt='bilqisfa-raihan'
             src='image/bilqisfa-raihan-clean.png'
           />
 
           <div className='flex flex-col items-center mt-[30px] space-y-5'>
             <div className='flex flex-col items-center space-y-1'>
+              <p className='mt-[10px] rounded-full italic bg-[#855f58] text-white py-1 px-3 font-cormorant-garamond text-[18px]'>
+                {language == 'en'
+                  ? 'Saturday, 8 February 2025'
+                  : 'Sabtu, 8 Februari 2025'}
+              </p>
+
               <h1 className='italic text-[#855f58] rounded-lg bg-opacity-40 px-3 font-cormorant-garamond text-[18px]'>
                 #meRAjutQISah
               </h1>
@@ -121,7 +128,7 @@ export default function WelcomePage({ language }: WelcomePageProps) {
       </div>
 
       {/* GIF Image positioned at top-left corner */}
-      <img
+      {/* <img
         alt='top-left-gif'
         src='gif/leaves.gif' // Replace with the actual path to your GIF
         className='absolute top-[-75px] left-[-10px] w-[175px] h-[175px] z-999 transform rotate-[100deg] opacity-60' // Added opacity
@@ -137,10 +144,10 @@ export default function WelcomePage({ language }: WelcomePageProps) {
         alt='top-left-gif'
         src='gif/leaves.gif' // Replace with the actual path to your GIF
         className='absolute top-[50px] left-[-80px] w-[175px] h-[175px] z-999 transform rotate-[50deg] opacity-70' // Added opacity
-      />
+      /> */}
 
       {/* GIF gif positioned at top-right corner */}
-      <img
+      {/* <img
         alt='top-left-gif'
         src='gif/leaves.gif' // Replace with the actual path to your GIF
         className='absolute top-[-75px] right-[-10px] w-[175px] h-[175px] z-999 transform rotate-[280deg] opacity-60' // Added opacity
@@ -156,7 +163,7 @@ export default function WelcomePage({ language }: WelcomePageProps) {
         alt='top-left-gif'
         src='gif/leaves.gif' // Replace with the actual path to your GIF
         className='absolute top-[50px] right-[-80px] w-[175px] h-[175px] z-999 transform rotate-[230deg] opacity-70' // Added opacity
-      />
+      /> */}
 
       {/* <img
         alt='bottom-left-gif'

@@ -74,17 +74,17 @@ function Home() {
       <div className='absolute top-4 right-4 z-[9999]'>
         <button
           onClick={toggleLanguage}
-          className='bg-gray-500 text-white py-1 px-4 rounded-lg shadow-lg opacity-80 text-[17px]'
+          className='bg-gray-400 text-white py-1 px-3 rounded-lg shadow-lg opacity-80 text-[15px]'
         >
-          {language === 'en' ? '🇺🇸 English' : '🇮🇩 Indonesia'}{' '}
+          {language === 'en' ? '🇺🇸 EN' : '🇮🇩 ID'}{' '}
         </button>
       </div>
 
       <div className='overflow-hidden w-full max-w-[450px] '>
-        <audio ref={audioRef} loop>
+        {/* <audio ref={audioRef} loop>
           <source src='audio/you-are-still-the-one.mp3' type='audio/mp3' />
           Your browser does not support the audio element.
-        </audio>
+        </audio> */}
 
         {/* Conditional rendering for pages */}
         {isOpeningPageVisible ? (

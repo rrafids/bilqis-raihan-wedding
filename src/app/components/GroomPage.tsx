@@ -38,7 +38,7 @@ export default function BridePage({ language }: GroomPageProps) {
     >
       <img
         alt='border gif'
-        src='image/bg-flower-light.png'
+        src='image/bg-1.png'
         className='absolute top-0 left-0 w-full h-screen object-cover'
       />
       <div className='absolute'>

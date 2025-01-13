@@ -37,11 +37,11 @@ export default function InvitationDetailPage({
   return (
     <div
       ref={detailRef}
-      className='w-full items-center min-h-screen flex flex-col justify-top relative overflow-hidden bg-[#FFEFE0] p-5 font-cormorant-garamond pt-[50px]'
+      className='w-full items-center min-h-screen flex flex-col justify-top relative overflow-hidden bg-[#F4E8DE] p-5 font-cormorant-garamond pt-[50px]'
     >
       <img
         alt='border gif'
-        src='image/akad-bg.png'
+        src='image/bg-akad-1.png'
         className={`absolute top-3 left-0 w-full h-screen object-cover transition-all duration-[3000ms] ${
           isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-105'
         }`}
@@ -85,7 +85,7 @@ export default function InvitationDetailPage({
         /> */}
 
         <p
-          className={`font-tangerine text-[50px] text-[#5f443f] mt-[40px] transition-all duration-[3000ms] delay-[1500ms] ${
+          className={`font-tangerine text-[50px] text-[#5f443f] mt-[30px] transition-all duration-[3000ms] delay-[1500ms] ${
             isVisible
               ? 'opacity-100 translate-y-0'
               : 'opacity-0 translate-y-[-30px]'
@@ -97,14 +97,14 @@ export default function InvitationDetailPage({
           <div className='flex flex-col items-center space-y-2'>
             <CalendarDateRangeIcon
               width='40px'
-              className={`text-[#5f443f]transition-all duration-[3000ms] delay-[2000ms] ${
+              className={`text-[#5f443f] transition-all duration-[3000ms] delay-[2000ms] ${
                 isVisible
                   ? 'opacity-100 translate-y-0'
                   : 'opacity-0 translate-y-[-30px]'
               }`}
             />
             <p
-              className={`text-[18px] font-cormorant-garamond font-semibold text-[#5f443f] transition-all duration-[3000ms] delay-[2000ms] ${
+              className={`text-[20px] font-cormorant-garamond font-semibold text-[#5f443f] transition-all duration-[3000ms] delay-[2000ms] ${
                 isVisible
                   ? 'opacity-100 translate-y-0'
                   : 'opacity-0 translate-y-[-30px]'
@@ -115,7 +115,7 @@ export default function InvitationDetailPage({
                 : 'Sabtu, 8 Februari 2025'}
             </p>
             <p
-              className={`text-[17px] font-cormorant-garamond text-[#5f443f] transition-all duration-[3000ms] delay-[2500ms] ${
+              className={`text-[19px] font-cormorant-garamond text-[#5f443f] transition-all duration-[3000ms] delay-[2500ms] ${
                 isVisible
                   ? 'opacity-100 translate-y-0'
                   : 'opacity-0 translate-y-[-30px]'
@@ -136,7 +136,7 @@ export default function InvitationDetailPage({
               }`}
             />
             <p
-              className={`text-[18px] font-cormorant-garamond font-semibold text-[#5f443f] mt-[10px] transition-all duration-[3000ms] delay-[3000ms] ${
+              className={`text-[20px] font-cormorant-garamond font-semibold text-[#5f443f] mt-[10px] transition-all duration-[3000ms] delay-[3000ms] ${
                 isVisible
                   ? 'opacity-100 translate-y-0'
                   : 'opacity-0 translate-y-[-30px]'
@@ -145,7 +145,7 @@ export default function InvitationDetailPage({
               {language == 'en' ? 'Ponyo Nagreg Restaurant' : 'RM Ponyo Nagreg'}
             </p>
             <p
-              className={`text-[15px] text-center mt-3 transition-all duration-[3000ms] delay-[3500ms] ${
+              className={`text-[17px] text-center mt-3 transition-all duration-[3000ms] delay-[3500ms] ${
                 isVisible
                   ? 'opacity-100 translate-y-0'
                   : 'opacity-0 translate-y-[-30px]'
@@ -154,7 +154,7 @@ export default function InvitationDetailPage({
               Jl. Raya Bandung - Garut No.KM. 35, RT.4/RW.07
             </p>
             <p
-              className={`text-[15px] text-center transition-all duration-[3000ms] delay-[3500ms] ${
+              className={`text-[17px] text-center transition-all duration-[3000ms] delay-[3500ms] ${
                 isVisible
                   ? 'opacity-100 translate-y-0'
                   : 'opacity-0 translate-y-[-30px]'
@@ -163,7 +163,7 @@ export default function InvitationDetailPage({
               Citaman, Kec. Nagreg
             </p>
             <p
-              className={`text-[15px] transition-all duration-[3000ms] delay-[4000ms] ${
+              className={`text-[17px] transition-all duration-[3000ms] delay-[4000ms] ${
                 isVisible
                   ? 'opacity-100 translate-y-0'
                   : 'opacity-0 translate-y-[-30px]'
@@ -184,16 +184,15 @@ export default function InvitationDetailPage({
             </a>
 
             <p
-              className={`mt-5 text-[15px] italic text-center w-[400px] font-cormorant-garamond text-[#5f443f] transition-all duration-[3500ms] delay-[5000ms] ${
+              className={`mt-5 text-[16px] italic text-center w-[400px] font-cormorant-garamond text-[#5f443f] transition-all duration-[3500ms] delay-[5000ms] ${
                 isVisible
                   ? 'opacity-100 translate-y-0'
                   : 'opacity-0 translate-y-[-30px]'
               }`}
             >
-              ()
               {language == 'en'
-                ? 'Wedding party will be hel in Purwokerto'
-                : 'Resepsi akan dilaksanakan di Purwokerto'}
+                ? '(Wedding party will be held in Purwokerto)'
+                : '(Resepsi akan dilaksanakan di Purwokerto)'}
             </p>
           </div>
         </div>

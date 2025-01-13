@@ -38,7 +38,7 @@ export default function BridePage({ language }: BridePageProps) {
     >
       <img
         alt='border gif'
-        src='image/bg-flower-light.png'
+        src='image/bg-1.png'
         className='absolute top-0 left-0 w-full h-screen object-cover'
       />
       <div className='absolute w-full'>
@@ -65,7 +65,7 @@ export default function BridePage({ language }: BridePageProps) {
         </div>
         <div className='text-[#644742] pe-3 mt-[40px] italic'>
           <p
-            className={`text-center transition-all duration-[2000ms] ${
+            className={`text-[18px] text-center transition-all duration-[2000ms] ${
               isVisible
                 ? 'opacity-100 translate-y-0'
                 : 'opacity-0 translate-y-[-30px]'
@@ -76,7 +76,7 @@ export default function BridePage({ language }: BridePageProps) {
               : 'Kami mengundang Bapak/Ibu/Saudara/i ke acara'}
           </p>
           <p
-            className={`text-center transition-all duration-[2000ms] ${
+            className={`text-[18px] text-center transition-all duration-[2000ms] ${
               isVisible
                 ? 'opacity-100 translate-y-0'
                 : 'opacity-0 translate-y-[-30px]'
@@ -91,7 +91,7 @@ export default function BridePage({ language }: BridePageProps) {
             <img
               alt='the bride img'
               src='image/the-bride-half.png'
-              className={`w-[200px] rounded-t-full border-4 border-opacity-30 border-white transition-all duration-[2000ms] delay-[1000ms] ${
+              className={`w-[200px] rounded-t-full border-4 shadow-xl border-opacity-30 border-white transition-all duration-[2000ms] delay-[1000ms] ${
                 isVisible
                   ? 'opacity-100 translate-y-0'
                   : 'opacity-0 translate-y-[-30px]'
@@ -114,7 +114,7 @@ export default function BridePage({ language }: BridePageProps) {
             </div>
           </div>
 
-          <div className='w-full font-tangerine col-span-1 flex flex-col place-content-center text-right space-y-[-10px] pe-7'>
+          <div className='w-full font-tangerine col-span-1 flex flex-col place-content-center text-right space-y-[-10px] pe-10'>
             <h1
               className={`text-[30px] text-[#5f443f] italic transition-all duration-[2000ms] delay-[1000ms] ${
                 isVisible
@@ -137,7 +137,7 @@ export default function BridePage({ language }: BridePageProps) {
         </div>
 
         <div
-          className={`mt-[20px] me-3 flex flex-col items-end space-y-2 py-2 px-3  rounded-l-xl transition-all duration-[2000ms] delay-[2000ms] ${
+          className={`mt-[20px] me-5 flex flex-col items-end space-y-2 py-2 px-3 rounded-l-xl transition-all duration-[2000ms] delay-[2000ms] ${
             isVisible
               ? 'opacity-100 translate-y-0'
               : 'opacity-0 translate-y-[-30px]'

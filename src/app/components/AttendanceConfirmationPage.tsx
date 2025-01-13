@@ -84,7 +84,7 @@ export default function AttendanceConfirmationPage({
   };
 
   return (
-    <div className='text-[#855f58] w-full min-h-screen items-center flex flex-col justify-top relative font-cormorant-garamond bg-gray-300'>
+    <div className='text-[#855f58] w-full min-h-screen items-center flex flex-col justify-top relative font-cormorant-garamond'>
       <img
         alt='border gif'
         src='image/letter.png'

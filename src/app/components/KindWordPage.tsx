@@ -86,7 +86,7 @@ export default function KindWordPage({ language }: KindWordPageProps) {
         src='image/letter.png'
         className='absolute top-0 left-0 w-full h-screen object-cover'
       />
-      <div className='absolute w-full p-[50px] flex flex-col items-center'>
+      <div className='absolute w-full p-[60px] flex flex-col items-center'>
         <h1 className='font-tangerine text-[50px] mt-[90px]'>
           {language == 'en' ? 'Wish & Prayer' : 'Doa & Ucapan'}
         </h1>

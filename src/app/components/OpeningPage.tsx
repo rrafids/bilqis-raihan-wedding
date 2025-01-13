@@ -69,7 +69,7 @@ export default function OpeningPage({
 
       <div className='z-10 mt-[15px] flex flex-col items-center'>
         <p
-          className={`font-cormorant-garamond text-[#855f58] transition-all duration-[2000ms] ${
+          className={`text-[20px] font-cormorant-garamond text-[#855f58] transition-all duration-[2000ms] ${
             hasIntersected
               ? 'opacity-100 translate-y-0'
               : 'opacity-0 translate-y-[-30px]'

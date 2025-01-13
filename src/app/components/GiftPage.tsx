@@ -46,19 +46,27 @@ export default function GiftPage({ language }: GiftPageProps) {
       {/* Background Image */}
       <img
         alt='gift page bg'
-        src='image/sea-flower-bg.png'
-        className='absolute top-3 left-0 w-full h-screen object-cover'
+        src='image/abg.png'
+        className='absolute top-0 left-0 w-full h-screen object-cover'
       />
 
       {/* Content Section */}
       <div
-        className={`ml-[-60px] absolute flex flex-col items-center mt-[120px] transition-all duration-1000 ${
+        className={`absolute flex flex-col items-center mt-[120px] transition-all duration-1000 ${
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}
       >
+        <img
+          alt='gift page bg'
+          src='image/gift-ill.png'
+          className={`w-[200px] mt-[-175px] transition-opacity duration-1000 ${
+            isVisible ? 'opacity-100' : 'opacity-0'
+          }`}
+        />
+
         {/* Title */}
         <h1
-          className={`text-[#5f443f] font-tangerine text-[50px] transition-opacity duration-1000 ${
+          className={`text-[#5f443f] mt-[-100px] font-tangerine text-[50px] transition-opacity duration-1000 ${
             isVisible ? 'opacity-100' : 'opacity-0'
           }`}
         >
@@ -67,7 +75,7 @@ export default function GiftPage({ language }: GiftPageProps) {
 
         {/* Description */}
         <p
-          className={`text-center w-[350px] text-gray-500 font-cormorant-garamond transition-all duration-1000 delay-200 ${
+          className={`text-[17px] text-center w-[350px] text-[#5f443f] font-cormorant-garamond transition-all duration-1000 delay-200 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
@@ -78,14 +86,14 @@ export default function GiftPage({ language }: GiftPageProps) {
 
         {/* Bank BCA Details */}
         <div
-          className={`text-center mt-10 font-cormorant-garamond space-y-2 transition-all duration-1000 delay-400 ${
+          className={`text-[17px] text-center mt-10 font-cormorant-garamond space-y-2 transition-all duration-1000 delay-400 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
           <p className='text-[#5f443f] font-semibold'>Bank BCA</p>
-          <p className='text-gray-500'>Aulia Bilqisfa Az Zahra</p>
+          <p className='text-[#5f443f]'>Aulia Bilqisfa Az Zahra</p>
           <div className='flex items-center justify-center space-x-2'>
-            <p className='text-gray-500'>7772565596</p>
+            <p className='text-[#5f443f]'>7772565596</p>
             <button
               onClick={() => handleCopy('7772565596')}
               className={`bg-[#5f443f] text-white px-3 py-1 rounded-full text-sm transition-transform duration-300 ${
@@ -101,13 +109,13 @@ export default function GiftPage({ language }: GiftPageProps) {
 
         {/* E-Wallet Details */}
         <div
-          className={`text-center mt-5 font-cormorant-garamond space-y-2 transition-all duration-1000 delay-600 ${
+          className={`text-[17px] text-center mt-5 font-cormorant-garamond space-y-2 transition-all duration-1000 delay-600 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
           <p className='text-[#5f443f] font-semibold'>E-Wallet (OVO/Gopay)</p>
           <div className='flex items-center justify-center space-x-2'>
-            <p className='text-gray-500'>082240237910</p>
+            <p className='text-[#5f443f]'>082240237910</p>
             <button
               onClick={() => handleCopy('082240237910')}
               className={`bg-[#5f443f] text-white px-3 py-1 rounded-full text-sm transition-transform duration-300 ${
@@ -123,13 +131,13 @@ export default function GiftPage({ language }: GiftPageProps) {
 
         {/* Paypal Details */}
         <div
-          className={`text-center mt-5 font-cormorant-garamond space-y-2 transition-all duration-1000 delay-600 ${
+          className={`text-[17px] text-center mt-5 font-cormorant-garamond space-y-2 transition-all duration-1000 delay-600 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
           <p className='text-[#5f443f] font-semibold'>Paypal</p>
           <div className='flex items-center justify-center space-x-2'>
-            <p className='text-gray-500'>@RaihanRafid</p>
+            <p className='text-[#5f443f]'>@RaihanRafid</p>
             <button
               onClick={() => handleCopy('@RaihanRafid')}
               className={`bg-[#5f443f] text-white px-3 py-1 rounded-full text-sm transition-transform duration-300 ${
