@@ -14,6 +14,7 @@ import AttendanceConfirmationPage from './components/AttendanceConfirmationPage'
 function Home() {
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const [isOpeningPageVisible, setIsOpeningPageVisible] = useState(true);
+  const [language, setLanguage] = useState<string>('en'); // Default language: English
 
   // Function to start the audio when the user interacts with the page
   const handleUserInteraction = () => {
@@ -32,11 +33,53 @@ function Home() {
     };
   });
 
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    let lang = params.get('lang');
+
+    if (!lang) {
+      lang = 'id';
+    }
+
+    setLanguage(lang);
+  }, []);
+
+  const toggleLanguage = () => {
+    // Determine the new language
+    const newLanguage = language === 'en' ? 'id' : 'en';
+    setLanguage(newLanguage);
+
+    // Get the current URL and its query parameters
+    const currentUrl = new URL(window.location.href);
+    const params = currentUrl.searchParams;
+
+    // Update the `lang` query parameter
+    if (params.has('lang')) {
+      params.set('lang', newLanguage); // Update existing `lang`
+    } else {
+      params.append('lang', newLanguage); // Add `lang` if not present
+    }
+
+    // Update the URL and refresh the page
+    currentUrl.search = params.toString();
+    window.location.href = currentUrl.toString();
+  };
+
   return (
     <div
-      className='flex flex-col items-center'
+      className='relative flex flex-col items-center'
       style={{ backgroundImage: 'image/bg-bw-flower.png' }}
     >
+      {/* Language Toggle Button */}
+      <div className='absolute top-4 right-4 z-[9999]'>
+        <button
+          onClick={toggleLanguage}
+          className='bg-gray-500 text-white py-1 px-4 rounded-lg shadow-lg opacity-80 text-[17px]'
+        >
+          {language === 'en' ? '🇺🇸 English' : '🇮🇩 Indonesia'}{' '}
+        </button>
+      </div>
+
       <div className='overflow-hidden w-full max-w-[450px] '>
         <audio ref={audioRef} loop>
           <source src='audio/you-are-still-the-one.mp3' type='audio/mp3' />
@@ -47,26 +90,19 @@ function Home() {
         {isOpeningPageVisible ? (
           <OpeningPage
             onOpenInvitation={() => setIsOpeningPageVisible(false)}
+            language={language}
           />
         ) : (
           <div className='transition-opacity duration-1000 ease-in-out opacity-100'>
-            <WelcomePage />
-
-            <PrayerPage />
-
-            <BridePage />
-
-            <GroomPage />
-
-            <InvitationDetailPage />
-
-            <GiftPage />
-
-            <KindWordPage />
-
-            <AttendanceConfirmationPage />
-
-            <ClosingPage />
+            <WelcomePage language={language} />
+            <PrayerPage language={language} />
+            <BridePage language={language} />
+            <GroomPage language={language} />
+            <InvitationDetailPage language={language} />
+            <GiftPage language={language} />
+            <KindWordPage language={language} />
+            <AttendanceConfirmationPage language={language} />
+            <ClosingPage language={language} />
           </div>
         )}
       </div>

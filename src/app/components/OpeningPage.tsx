@@ -3,9 +3,13 @@ import { useState, useEffect, useRef } from 'react';
 
 interface OpeningPageProps {
   onOpenInvitation: () => void;
+  language: string;
 }
 
-export default function OpeningPage({ onOpenInvitation }: OpeningPageProps) {
+export default function OpeningPage({
+  onOpenInvitation,
+  language,
+}: OpeningPageProps) {
   const [isVisible, setIsVisible] = useState(true);
   const [recipientName, setRecipientName] = useState<string>('');
   const containerRef = useRef<HTMLDivElement | null>(null);
@@ -71,7 +75,7 @@ export default function OpeningPage({ onOpenInvitation }: OpeningPageProps) {
               : 'opacity-0 translate-y-[-30px]'
           }`}
         >
-          The Wedding of
+          {language == 'en' ? 'The Wedding of' : 'Pernikahan'}
         </p>
         <div
           className={`flex flex-col space-y-[-50px] items-center transition-all duration-[2000ms] delay-[300ms] ${
@@ -106,13 +110,13 @@ export default function OpeningPage({ onOpenInvitation }: OpeningPageProps) {
             </h1>
           </div>
           <p className='italic font-cormorant-garamond text-[#855f58]'>
-            You&#39;re invited!
+            {language == 'en' ? "You're invited!" : 'Anda diundang!'}
           </p>
           <button
             className='text-[15px] animated-zoom text-white bg-[#855f58] rounded-full px-5 py-3 hover:scale-105 transform transition'
             onClick={handleOpenInvitation}
           >
-            Open Invitation
+            {language == 'en' ? 'Open Invitation' : 'Buka Undangan'}
           </button>
         </div>
       </div>

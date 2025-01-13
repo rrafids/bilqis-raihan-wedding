@@ -3,7 +3,11 @@ import React, { useEffect, useState, useRef } from 'react';
 import db from '../../../firebaseConfig';
 import { ref, set } from 'firebase/database';
 
-export default function KindWordPage() {
+interface KindWordPageProps {
+  language: string;
+}
+
+export default function KindWordPage({ language }: KindWordPageProps) {
   const [recipientName, setRecipientName] = useState<string>('');
   const [isVisible, setIsVisible] = useState(false);
   const [showThankYou, setShowThankYou] = useState(false);

@@ -9,8 +9,11 @@ interface Leaf {
   duration: number;
   type: string; // Add type for the leaf icon
 }
+interface WelcomePageProps {
+  language: string;
+}
 
-export default function OpeningPage() {
+export default function WelcomePage({ language }: WelcomePageProps) {
   const [step, setStep] = useState(0);
   const [leaves, setLeaves] = useState<Leaf[]>([]); // Specify that leaves is an array of Leaf objects
 
@@ -80,7 +83,7 @@ export default function OpeningPage() {
                 : 'translate-y-10 opacity-0'
             }`}
           >
-            The Wedding of
+            {language == 'en' ? 'The Wedding of' : 'Pernikahan'}
           </p>
 
           {/* Step 2: "Bilqis & Raihan" */}

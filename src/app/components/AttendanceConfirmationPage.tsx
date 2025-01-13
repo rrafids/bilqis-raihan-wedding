@@ -2,7 +2,13 @@ import React, { useEffect, useState, useRef } from 'react';
 import db from '../../../firebaseConfig';
 import { ref, set } from 'firebase/database';
 
-export default function KindWordPage() {
+interface AttendanceConfirmationPageProps {
+  language: string;
+}
+
+export default function AttendanceConfirmationPage({
+  language,
+}: AttendanceConfirmationPageProps) {
   const [recipientName, setRecipientName] = useState<string>('');
   const [isVisible, setIsVisible] = useState(false);
   const [showThankYou, setShowThankYou] = useState(false);

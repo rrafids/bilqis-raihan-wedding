@@ -1,7 +1,11 @@
 'use client';
 import { useEffect, useState, useRef } from 'react';
 
-export default function PrayerPage() {
+interface PrayerPageProps {
+  language: string;
+}
+
+export default function PrayerPage({ language }: PrayerPageProps) {
   const [isVisible, setIsVisible] = useState(false);
   const prayerRef = useRef<HTMLDivElement | null>(null);
 
@@ -59,11 +63,9 @@ export default function PrayerPage() {
               : 'opacity-0 translate-y-[-30px]'
           }`}
         >
-          Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu
-          isteri-isteri dari jenismu sendiri, supaya kamu cenderung dan merasa
-          tenteram kepadanya, dan dijadikan-Nya diantaramu rasa kasih dan
-          sayang. Sesungguhnya pada yang demikian itu benar-benar terdapat
-          tanda-tanda bagi kaum yang berfikir.
+          {language == 'en'
+            ? 'And one of His signs is that He created for you spouses from among yourselves so that you may find comfort in them. And He has placed between you compassion and mercy. Surely in this are signs for people who reflect.'
+            : 'Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu isteri-isteri dari jenismu sendiri, supaya kamu cenderung dan merasa tenteram kepadanya, dan dijadikan-Nya diantaramu rasa kasih dan sayang. Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda bagi kaum yang berfikir.'}
         </p>
 
         <h1

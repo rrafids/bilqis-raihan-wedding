@@ -1,7 +1,13 @@
 import { useEffect, useState, useRef } from 'react';
 import { CalendarDateRangeIcon, MapPinIcon } from '@heroicons/react/24/solid';
 
-export default function InvitationDetailPage() {
+interface InvitationDetailPageProps {
+  language: string;
+}
+
+export default function InvitationDetailPage({
+  language,
+}: InvitationDetailPageProps) {
   const [isVisible, setIsVisible] = useState(false);
   const detailRef = useRef<HTMLDivElement | null>(null);
 
@@ -79,7 +85,7 @@ export default function InvitationDetailPage() {
         /> */}
 
         <p
-          className={`font-tangerine text-[50px] text-[#5f443f] mt-[50px] transition-all duration-[3000ms] delay-[1500ms] ${
+          className={`font-tangerine text-[50px] text-[#5f443f] mt-[40px] transition-all duration-[3000ms] delay-[1500ms] ${
             isVisible
               ? 'opacity-100 translate-y-0'
               : 'opacity-0 translate-y-[-30px]'

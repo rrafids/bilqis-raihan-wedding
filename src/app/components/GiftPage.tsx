@@ -1,6 +1,10 @@
 import { useState, useEffect, useRef } from 'react';
 
-export default function GiftPage() {
+interface GiftPageProps {
+  language: string;
+}
+
+export default function GiftPage({ language }: GiftPageProps) {
   const [isVisible, setIsVisible] = useState(false); // Animation trigger
   const [copiedText, setCopiedText] = useState<string | null>(null);
   const giftRef = useRef<HTMLDivElement | null>(null);

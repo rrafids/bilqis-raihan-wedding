@@ -1,4 +1,8 @@
-export default function ClosingPage() {
+interface ClosingPageProps {
+  language: string;
+}
+
+export default function ClosingPage({ language }: ClosingPageProps) {
   return (
     <div
       className={`relative w-full min-h-screen flex flex-col justify-center items-center overflow-hidden bg-gray-300 transition-opacity duration-1000`}

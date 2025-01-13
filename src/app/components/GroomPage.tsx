@@ -1,6 +1,10 @@
 import { useEffect, useState, useRef } from 'react';
 
-export default function BridePage() {
+interface GroomPageProps {
+  language: string;
+}
+
+export default function BridePage({ language }: GroomPageProps) {
   const [isVisible, setIsVisible] = useState(false);
   const brideRef = useRef<HTMLDivElement | null>(null);
 
