@@ -67,7 +67,7 @@ export default function OpeningPage({
         className='absolute top-0 left-0 w-full h-screen object-cover'
       />
 
-      <div className='z-10 flex flex-col items-center'>
+      <div className='z-10 mt-[15px] flex flex-col items-center'>
         <p
           className={`font-cormorant-garamond text-[#855f58] transition-all duration-[2000ms] ${
             hasIntersected
@@ -78,7 +78,7 @@ export default function OpeningPage({
           {language == 'en' ? 'The Wedding of' : 'Pernikahan'}
         </p>
         <div
-          className={`flex flex-col space-y-[-50px] items-center transition-all duration-[2000ms] delay-[300ms] ${
+          className={`flex flex-col space-y-[-60px] items-center transition-all duration-[2000ms] delay-[300ms] ${
             hasIntersected
               ? 'opacity-100 translate-y-0'
               : 'opacity-0 translate-y-[-30px]'
@@ -97,7 +97,7 @@ export default function OpeningPage({
         </div>
 
         <div
-          className={`flex flex-col items-center mt-[30px] space-y-5 transition-all duration-[2000ms] delay-[500ms] ${
+          className={`flex flex-col items-center mt-[20px] space-y-5 transition-all duration-[2000ms] delay-[500ms] ${
             hasIntersected
               ? 'opacity-100 translate-y-0'
               : 'opacity-0 translate-y-[-30px]'
