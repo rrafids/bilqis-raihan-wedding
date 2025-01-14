@@ -67,7 +67,7 @@ export default function OpeningPage({
         className='absolute top-0 left-0 w-full h-screen object-cover'
       />
 
-      <div className='z-10 mt-[15px] flex flex-col items-center'>
+      <div className='z-10 mt-[35px] flex flex-col items-center'>
         <p
           className={`text-[20px] font-cormorant-garamond text-[#855f58] transition-all duration-[2000ms] ${
             hasIntersected

@@ -73,7 +73,7 @@ export default function WelcomePage({ language }: WelcomePageProps) {
       ))}
 
       {/* Content */}
-      <div className='flex flex-col absolute h-screen mt-[-100px] items-center place-content-center z-10 p-4 text-center font-bold'>
+      <div className='flex flex-col absolute h-screen items-center place-content-center z-10 p-4 text-center font-bold'>
         <div className='space-y-[-15px]'>
           {/* Step 1: "The Wedding of" */}
           <p
@@ -106,7 +106,7 @@ export default function WelcomePage({ language }: WelcomePageProps) {
         >
           {/* Main Image */}
           <img
-            className='border-opacity-75 shadow-2xl border-[#855f58] rounded-[100px] z-10 sm:w-[400px] w-[230px]'
+            className='border-opacity-75 shadow-2xl border-[#855f58] rounded-[100px] z-10 w-[230px]'
             alt='bilqisfa-raihan'
             src='image/bilqisfa-raihan-clean.png'
           />

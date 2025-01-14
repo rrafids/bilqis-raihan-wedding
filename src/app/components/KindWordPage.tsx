@@ -111,9 +111,8 @@ export default function KindWordPage({ language }: KindWordPageProps) {
               <div>
                 <label>{language == 'en' ? 'Name' : 'Nama'}</label>
                 <input
-                  placeholder='Nama'
                   defaultValue={recipientName}
-                  className='p-3 w-full rounded-lg opacity-70'
+                  className='p-2 w-full rounded-lg opacity-70 border-2 border-transparent outline-none focus:outline-2 focus:border-2 focus:border-[#855f58]'
                 />
               </div>
 
@@ -125,7 +124,7 @@ export default function KindWordPage({ language }: KindWordPageProps) {
                 </label>
                 <textarea
                   name='message'
-                  className='p-3 w-full rounded-lg opacity-70'
+                  className='p-2 w-full rounded-lg opacity-70 border-2 border-transparent outline-none focus:outline-2 focus:border-2 focus:border-[#855f58]'
                 ></textarea>
               </div>
 

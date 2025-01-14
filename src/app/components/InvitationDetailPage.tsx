@@ -145,7 +145,7 @@ export default function InvitationDetailPage({
               {language == 'en' ? 'Ponyo Nagreg Restaurant' : 'RM Ponyo Nagreg'}
             </p>
             <p
-              className={`text-[17px] text-center mt-3 transition-all duration-[3000ms] delay-[3500ms] ${
+              className={`text-[#5f443f] text-[17px] text-center mt-3 transition-all duration-[3000ms] delay-[3500ms] ${
                 isVisible
                   ? 'opacity-100 translate-y-0'
                   : 'opacity-0 translate-y-[-30px]'
@@ -154,7 +154,7 @@ export default function InvitationDetailPage({
               Jl. Raya Bandung - Garut No.KM. 35, RT.4/RW.07
             </p>
             <p
-              className={`text-[17px] text-center transition-all duration-[3000ms] delay-[3500ms] ${
+              className={`text-[#5f443f] text-[17px] text-center transition-all duration-[3000ms] delay-[3500ms] ${
                 isVisible
                   ? 'opacity-100 translate-y-0'
                   : 'opacity-0 translate-y-[-30px]'
@@ -163,7 +163,7 @@ export default function InvitationDetailPage({
               Citaman, Kec. Nagreg
             </p>
             <p
-              className={`text-[17px] transition-all duration-[3000ms] delay-[4000ms] ${
+              className={`text-[#5f443f] text-[17px] transition-all duration-[3000ms] delay-[4000ms] ${
                 isVisible
                   ? 'opacity-100 translate-y-0'
                   : 'opacity-0 translate-y-[-30px]'

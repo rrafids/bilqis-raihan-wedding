@@ -14,8 +14,8 @@ export default function ClosingPage({ language }: ClosingPageProps) {
       />
 
       <div className='z-10 flex flex-col items-center'>
-        <p className='font-cormorant-garamond text-[#855f58] text-[20px]'>
-          {language == 'en' ? 'The Wedding of' : 'Pernikahan'}
+        <p className='font-cormorant-garamond text-[#855f58] text-[21px]'>
+          {language == 'en' ? 'Thank you' : 'Terima kasih'}
         </p>
         <div className='flex flex-col space-y-[-50px] items-center'>
           <span className='text-[#855f58] font-royal-wedding text-[80px]'>
@@ -28,12 +28,9 @@ export default function ClosingPage({ language }: ClosingPageProps) {
             Raihan
           </span>
         </div>
-
-        <div className='flex flex-col items-center mt-[30px] space-y-5'>
-          <div className='flex flex-col items-center space-y-1'>
-            <h1 className='text-[#855f58] text-[15px] italic'>#meRAjutQISah</h1>
-          </div>
-        </div>
+        <h1 className='mt-[10px] italic text-[#855f58] rounded-lg bg-opacity-40 px-3 font-cormorant-garamond text-[18px]'>
+          #meRAjutQISah
+        </h1>
       </div>
 
       <img

@@ -29,7 +29,7 @@ export default function RootLayout({
       <Head>
         <link
           rel='icon'
-          href='https://raw.githubusercontent.com/rrafids/bantupalestina/master/public/images/favicon.ico'
+          href='https://raw.githubusercontent.com/rrafids/bilqis-raihan-wedding/master/public/image/favico.ico'
           sizes='any'
         />
       </Head>
