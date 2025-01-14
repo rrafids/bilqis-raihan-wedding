@@ -90,10 +90,10 @@ export default function GiftPage({ language }: GiftPageProps) {
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
-          <p className='text-[#5f443f] font-semibold'>Bank BCA</p>
+          <p className='text-[#5f443f] text-[19px] font-semibold'>Bank BCA</p>
           <p className='text-[#5f443f]'>Aulia Bilqisfa Az Zahra</p>
           <div className='flex items-center justify-center space-x-2'>
-            <p className='text-[#5f443f]'>7772565596</p>
+            <p className='text-[#5f443f] font-times-new-roman'>7772565596</p>
             <button
               onClick={() => handleCopy('7772565596')}
               className={`bg-[#5f443f] text-white px-3 py-1 rounded-full text-sm transition-transform duration-300 ${
@@ -113,9 +113,11 @@ export default function GiftPage({ language }: GiftPageProps) {
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
-          <p className='text-[#5f443f] font-semibold'>E-Wallet (OVO/Gopay)</p>
+          <p className='text-[#5f443f] text-[19px] font-semibold'>
+            E-Wallet (OVO/Gopay)
+          </p>
           <div className='flex items-center justify-center space-x-2'>
-            <p className='text-[#5f443f]'>082240237910</p>
+            <p className='text-[#5f443f] font-times-new-roman'>082240237910</p>
             <button
               onClick={() => handleCopy('082240237910')}
               className={`bg-[#5f443f] text-white px-3 py-1 rounded-full text-sm transition-transform duration-300 ${
@@ -135,7 +137,7 @@ export default function GiftPage({ language }: GiftPageProps) {
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
-          <p className='text-[#5f443f] font-semibold'>Paypal</p>
+          <p className='text-[#5f443f] text-[19px] font-semibold'>Paypal</p>
           <div className='flex items-center justify-center space-x-2'>
             <p className='text-[#5f443f]'>@RaihanRafid</p>
             <button

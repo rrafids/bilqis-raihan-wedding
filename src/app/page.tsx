@@ -81,10 +81,10 @@ function Home() {
       </div>
 
       <div className='overflow-hidden w-full max-w-[450px] '>
-        {/* <audio ref={audioRef} loop>
-          <source src='audio/you-are-still-the-one.mp3' type='audio/mp3' />
+        <audio ref={audioRef} loop>
+          <source src='audio/canon-in-d.mp3' type='audio/mp3' />
           Your browser does not support the audio element.
-        </audio> */}
+        </audio>
 
         {/* Conditional rendering for pages */}
         {isOpeningPageVisible ? (
