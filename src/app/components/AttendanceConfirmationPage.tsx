@@ -88,7 +88,7 @@ export default function AttendanceConfirmationPage({
       <img
         alt='border gif'
         src='image/letter.png'
-        className='absolute top-0 left-0 w-full h-screen object-cover'
+        className='absolute top-0 left-0 w-full h-screen object-cover transform -scale-x-100'
       />
       <div className='absolute w-full h-full p-5 flex flex-col items-center justify-center mt-[-50px]'>
         <img alt='border gif' src='image/dear-you.png' className='w-[150px]' />
