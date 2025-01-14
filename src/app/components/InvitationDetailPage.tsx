@@ -85,7 +85,7 @@ export default function InvitationDetailPage({
         /> */}
 
         <p
-          className={`font-tangerine text-[50px] text-[#5f443f] mt-[30px] transition-all duration-[3000ms] delay-[1500ms] ${
+          className={`font-tangerine text-[45px] text-[#5f443f] mt-[30px] transition-all duration-[3000ms] delay-[1500ms] ${
             isVisible
               ? 'opacity-100 translate-y-0'
               : 'opacity-0 translate-y-[-30px]'
@@ -94,7 +94,7 @@ export default function InvitationDetailPage({
           {language == 'en' ? 'The Wedding' : 'Akad Nikah'}
         </p>
         <div className='flex flex-col items-center mt-[20px]'>
-          <div className='flex flex-col items-center space-y-2'>
+          <div className='flex flex-col items-center space-y-1'>
             <CalendarDateRangeIcon
               width='40px'
               className={`text-[#5f443f] transition-all duration-[3000ms] delay-[2000ms] ${
@@ -145,7 +145,7 @@ export default function InvitationDetailPage({
               {language == 'en' ? 'Ponyo Nagreg Restaurant' : 'RM Ponyo Nagreg'}
             </p>
             <p
-              className={`text-[#5f443f] text-[17px] text-center mt-3 transition-all duration-[3000ms] delay-[3500ms] ${
+              className={`text-[#5f443f] text-[17px] text-center mt-2 transition-all duration-[3000ms] delay-[3500ms] ${
                 isVisible
                   ? 'opacity-100 translate-y-0'
                   : 'opacity-0 translate-y-[-30px]'
@@ -160,18 +160,8 @@ export default function InvitationDetailPage({
                   : 'opacity-0 translate-y-[-30px]'
               }`}
             >
-              Citaman, Kec. Nagreg
+              Citaman, Kec. Nagreg, Kab. Bandung, Jawa Barat
             </p>
-            <p
-              className={`text-[#5f443f] text-[17px] transition-all duration-[3000ms] delay-[4000ms] ${
-                isVisible
-                  ? 'opacity-100 translate-y-0'
-                  : 'opacity-0 translate-y-[-30px]'
-              }`}
-            >
-              Kabupaten Bandung, Jawa Barat
-            </p>
-
             <a
               href='https://maps.app.goo.gl/x5BsJDLtvbt17zUv8?g_st=com.google.maps.preview.copy'
               className={`bg-[#5f443f] text-white py-3 px-5 rounded-full mt-[30px] transition-all duration-[3000ms] delay-[4500ms] ${

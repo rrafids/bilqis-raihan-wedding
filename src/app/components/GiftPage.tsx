@@ -90,8 +90,9 @@ export default function GiftPage({ language }: GiftPageProps) {
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
-          <p className='text-[#5f443f] text-[19px] font-semibold'>Bank BCA</p>
-          <p className='text-[#5f443f]'>Aulia Bilqisfa Az Zahra</p>
+          <p className='text-[#5f443f] text-[19px] font-semibold'>
+            BCA: Aulia Bilqisfa Az Zahra
+          </p>
           <div className='flex items-center justify-center space-x-2'>
             <p className='text-[#5f443f] font-times-new-roman'>7772565596</p>
             <button
