@@ -80,7 +80,7 @@ export default function GiftPage({ language }: GiftPageProps) {
           }`}
         >
           {language == 'en'
-            ? 'Your blessings and presence at our wedding are more than enough for us. However, if you wish to give a gift, we have provided a digital envelope for your convenience. Thank you.'
+            ? 'Your presence and heartfelt blessings at our wedding are the greatest gifts we could ask for. However, should you wish to extend your generosity further, a digital envelope has been thoughtfully arranged for your convenience. With gratitude, thank you.'
             : 'Doa restu dan kehadiran Bapak/Ibu/Saudara/i di pernikahan kami sudah lebih dari cukup bagi kami. Namun, jika berkenan memberikan hadiah, kami telah menyediakan amplop digital. Terima kasih.'}
         </p>
 
