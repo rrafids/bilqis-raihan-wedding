@@ -52,7 +52,7 @@ export default function GiftPage({ language }: GiftPageProps) {
 
       {/* Content Section */}
       <div
-        className={`absolute flex flex-col items-center mt-[120px] transition-all duration-1000 ${
+        className={`absolute flex flex-col items-center mt-[100px] transition-all duration-1000 ${
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}
       >
