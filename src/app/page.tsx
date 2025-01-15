@@ -62,7 +62,7 @@ function Home() {
 
     // Update the URL and refresh the page
     currentUrl.search = params.toString();
-    window.location.href = currentUrl.toString();
+    // window.location.href = currentUrl.toString();
   };
 
   return (
@@ -76,7 +76,7 @@ function Home() {
           onClick={toggleLanguage}
           className='bg-gray-400 text-white py-1 px-3 rounded-lg shadow-lg opacity-80 text-[15px]'
         >
-          {language === 'en' ? '🇺🇸 EN' : '🇮🇩 ID'}{' '}
+          {language === 'en' ? '🇺🇸 EN' : '🇮🇩 ID'}
         </button>
       </div>
 
