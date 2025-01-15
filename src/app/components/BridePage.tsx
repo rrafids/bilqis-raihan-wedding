@@ -76,7 +76,7 @@ export default function BridePage({ language }: BridePageProps) {
               : 'Kami mengundang Bapak/Ibu/Saudara/i ke acara'}
           </p>
           <p
-            className={`text-[18px] text-center transition-all duration-[2000ms] ${
+            className={`text-[18px] font-semibold text-center transition-all duration-[2000ms] ${
               isVisible
                 ? 'opacity-100 translate-y-0'
                 : 'opacity-0 translate-y-[-30px]'
