@@ -99,9 +99,9 @@ function Home() {
             <BridePage language={language} />
             <GroomPage language={language} />
             <InvitationDetailPage language={language} />
-            <GiftPage language={language} />
-            <KindWordPage language={language} />
             <AttendanceConfirmationPage language={language} />
+            <KindWordPage language={language} />
+            <GiftPage language={language} />
             <ClosingPage language={language} />
           </div>
         )}

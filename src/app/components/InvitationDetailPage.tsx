@@ -91,7 +91,7 @@ export default function InvitationDetailPage({
               : 'opacity-0 translate-y-[-30px]'
           }`}
         >
-          {language == 'en' ? 'The Wedding' : 'Akad Nikah'}
+          {language == 'en' ? 'Holy Matrimony' : 'Akad Nikah'}
         </p>
         <div className='flex flex-col items-center mt-[20px]'>
           <div className='flex flex-col items-center space-y-1'>
@@ -122,7 +122,7 @@ export default function InvitationDetailPage({
               }`}
             >
               {language == 'en'
-                ? '8 AM - 12 PM Jakarta'
+                ? '8 AM - 12 PM Jakarta Time'
                 : '08.00 WIB - 12.00 WIB'}
             </p>
           </div>

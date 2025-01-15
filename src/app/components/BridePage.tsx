@@ -65,7 +65,7 @@ export default function BridePage({ language }: BridePageProps) {
         </div>
         <div className='text-[#644742] pe-3 mt-[40px] italic'>
           <p
-            className={`text-[18px] text-center transition-all duration-[2000ms] ${
+            className={`text-[18px] font-semibold text-center transition-all duration-[2000ms] ${
               isVisible
                 ? 'opacity-100 translate-y-0'
                 : 'opacity-0 translate-y-[-30px]'
