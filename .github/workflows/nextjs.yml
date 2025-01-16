@@ -58,6 +58,9 @@ jobs:
           name: nextjs-artifact
           path: ./out
 
+      - name: Check for symlinks
+        run: find ./out -type l -exec ls -la {} \;
+
   deploy:
     environment:
       name: github-pages

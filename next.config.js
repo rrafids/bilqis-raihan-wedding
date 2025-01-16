@@ -4,6 +4,7 @@ const nextConfig = {
   trailingSlash: true,
   images: {
     domains: ['raw.githubusercontent.com'],
+    unoptimized: true, // Disable Image Optimization
   },
   webpack: (config, { isServer }) => {
     if (isServer) {
