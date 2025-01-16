@@ -12,8 +12,8 @@ export const metadata: Metadata = {
     icon: [
       {
         media: '(prefers-color-scheme: light)',
-        url: 'https://raw.githubusercontent.com/rrafids/bantupalestina/master/public/images/bp_logo.png',
-        href: 'https://raw.githubusercontent.com/rrafids/bantupalestina/master/public/images/bp_logo.png',
+        url: 'https://raw.githubusercontent.com/rrafids/bilqis-raihan-wedding/master/public/image/favico.ico',
+        href: 'https://raw.githubusercontent.com/rrafids/bilqis-raihan-wedding/master/public/image/favico.ico',
       },
     ],
   },
