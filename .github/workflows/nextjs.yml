@@ -58,6 +58,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
+          name: nextjs-artifact
           path: |
             .next
             ./out
@@ -74,3 +75,5 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
+        with:
+          artifact-name: nextjs-artifact
