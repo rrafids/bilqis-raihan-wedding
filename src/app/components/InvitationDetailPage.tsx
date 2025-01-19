@@ -174,7 +174,7 @@ export default function InvitationDetailPage({
             </a>
 
             <p
-              className={`mt-5 text-[16px] italic text-center w-[400px] font-cormorant-garamond text-[#5f443f] transition-all duration-[3500ms] delay-[5000ms] ${
+              className={`mt-5 text-[18px] italic text-center w-[400px] font-cormorant-garamond text-[#5f443f] transition-all duration-[3500ms] delay-[5000ms] ${
                 isVisible
                   ? 'opacity-100 translate-y-0'
                   : 'opacity-0 translate-y-[-30px]'
