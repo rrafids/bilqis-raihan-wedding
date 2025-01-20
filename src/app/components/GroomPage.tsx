@@ -77,7 +77,7 @@ export default function BridePage({ language }: GroomPageProps) {
           <div className='col-span-1 flex flex-col items-end justify-content-end w-full'>
             <img
               alt='the bride img'
-              src='image/the-groom.png'
+              src='image/groom-1.png'
               className={`w-[200px] shadow-xl rounded-t-full border-4 border-opacity-30 border-white transition-all duration-[2000ms] delay-[1000ms] ${
                 isVisible
                   ? 'opacity-100 translate-y-0'
