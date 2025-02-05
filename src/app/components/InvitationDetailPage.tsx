@@ -122,8 +122,8 @@ export default function InvitationDetailPage({
               }`}
             >
               {language == 'en'
-                ? '8 AM - 12 PM Jakarta Time'
-                : '08.00 WIB - 12.00 WIB'}
+                ? '9 AM - 12 PM Jakarta Time'
+                : '09.00 WIB - 12.00 WIB'}
             </p>
           </div>
           <div className='flex flex-col items-center mt-[30px] font-cormorant-garamond'>
