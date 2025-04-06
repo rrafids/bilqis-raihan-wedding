@@ -84,7 +84,7 @@ export default function GroomReceptionPage({
                 : 'opacity-0 translate-y-[-30px]'
             }`}
           >
-            {language == 'en' ? 'wedding event:' : 'akad nikah:'}
+            {language == 'en' ? 'reception:' : 'ngunduh mantu:'}
           </p>
         </div>
 
