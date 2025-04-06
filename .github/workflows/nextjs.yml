@@ -55,25 +55,41 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
-      - name: Clean and prepare output
+      - name: Prepare artifact
         run: |
-          # Remove any existing resolved output directory
-          rm -rf out_resolved
-          # Create fresh directory
-          mkdir -p out_resolved
-          # Create .nojekyll file first
-          touch out_resolved/.nojekyll
-          # Copy files while resolving symlinks and preserving attributes
-          cp -rLf out/* out_resolved/ || true
-          # Remove any remaining symlinks (just in case)
-          find out_resolved -type l -delete
-          # Remove any empty directories
-          find out_resolved -type d -empty -delete
-          # Print final directory structure and size
-          echo "Final directory structure:"
-          ls -la out_resolved
+          # Create a fresh temporary directory
+          TEMP_DIR=$(mktemp -d)
+          
+          # Create .nojekyll file
+          touch "$TEMP_DIR/.nojekyll"
+          
+          # Copy files individually to avoid symlink issues
+          echo "Copying files..."
+          cd out
+          find . -type f -exec sh -c '
+            mkdir -p "$0/$(dirname "{}")"
+            cp -P "{}" "$0/{}"
+          ' "$TEMP_DIR" \;
+          
+          # Verify the contents
+          echo "Verifying copied files..."
+          cd "$TEMP_DIR"
+          find . -type f | sort
+          
+          # Check for any remaining symlinks
+          echo "Checking for symlinks..."
+          if find . -type l | grep .; then
+            echo "Error: Symlinks found!"
+            exit 1
+          fi
+          
+          # Show total size
           echo "Total size:"
-          du -sh out_resolved
+          du -sh .
+          
+          # Move to final location
+          rm -rf out_resolved
+          mv "$TEMP_DIR" out_resolved
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
@@ -91,5 +107,5 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-        # with:
-        #   artifact_name: artifact
+        with:
+          artifact_name: github-pages
