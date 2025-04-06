@@ -122,8 +122,8 @@ export default function InvitationDetailPage({
               }`}
             >
               {language == 'en'
-                ? '9 AM - 12 PM Jakarta Time'
-                : '09.00 WIB - 12.00 WIB'}
+                ? '11 AM - 1 PM Jakarta Time'
+                : '11.00 WIB - 13.00 WIB'}
             </p>
           </div>
           <div className='flex flex-col items-center mt-[30px] font-cormorant-garamond'>
@@ -151,7 +151,7 @@ export default function InvitationDetailPage({
                   : 'opacity-0 translate-y-[-30px]'
               }`}
             >
-              Jl. Paguyuban II - Garut No.KM. 35, RT.4/RW.07
+              Jl. DR. Soeparno No.97
             </p>
             <p
               className={`text-[#5f443f] text-[17px] text-center transition-all duration-[3000ms] delay-[3500ms] ${
@@ -160,10 +160,11 @@ export default function InvitationDetailPage({
                   : 'opacity-0 translate-y-[-30px]'
               }`}
             >
-              Arcawinanung, Kab. Banyumas, Jawa Tengah
+              Arcawinangun, Kec. Purwokerto Tim., Kabupaten Banyumas, Jawa
+              Tengah
             </p>
             <a
-              href='https://maps.app.goo.gl/x5BsJDLtvbt17zUv8?g_st=com.google.maps.preview.copy'
+              href='https://maps.app.goo.gl/dF9bKenf6puwUPYVA?g_st=com.google.maps.preview.copy'
               className={`bg-[#5f443f] text-white py-3 px-5 rounded-full mt-[30px] transition-all duration-[3000ms] delay-[4500ms] ${
                 isVisible
                   ? 'opacity-100 translate-y-0'

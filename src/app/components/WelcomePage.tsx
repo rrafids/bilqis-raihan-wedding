@@ -106,7 +106,7 @@ export default function WelcomePage({ language }: WelcomePageProps) {
         >
           {/* Main Image */}
           <img
-            className='border-opacity-75 shadow-2xl border-[#855f58] rounded-[100px] z-10 w-[250px]'
+            className='border-opacity-75 shadow-2xl border-4 border-[#855f58] rounded-[100px] z-10 w-[200px]'
             alt='bilqisfa-raihan'
             src='image/bdg-wedding-crop.png'
           />

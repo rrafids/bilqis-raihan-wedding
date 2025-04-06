@@ -63,7 +63,7 @@ export default function BrideReceptionPage({
                   : 'opacity-0 translate-y-[-30px]'
               }`}
             >
-              {language == 'en' ? 'The Groom' : 'Mempelai Pria'}
+              {language == 'en' ? 'The Bride' : 'Mempelai Wanita'}
             </h1>
             <h1
               className={`text-[#5f443f] font-royal-wedding text-[75px] transition-all duration-[2000ms] delay-[1500ms] ${
@@ -72,7 +72,7 @@ export default function BrideReceptionPage({
                   : 'opacity-0 translate-y-[-30px]'
               }`}
             >
-              Raihan
+              Bilqis
             </h1>
           </div>
 
@@ -111,7 +111,7 @@ export default function BrideReceptionPage({
           }`}
         >
           <h1 className='font-semibold text-[#5f443f] text-[20px]'>
-            Auliya Bilqisfa, S.Psi
+            Aulia Bilqisfa Az Zahra, S.Psi
           </h1>
           <p className='text-[#5f443f]'>
             {language == 'en'

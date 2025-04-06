@@ -118,16 +118,16 @@ export default function GiftPage({ language }: GiftPageProps) {
             E-Wallet (OVO/Gopay)
           </p>
           <div className='flex items-center justify-center space-x-2'>
-            <p className='text-[#5f443f] font-times-new-roman'>082240237910</p>
+            <p className='text-[#5f443f] font-times-new-roman'>085726270545</p>
             <button
-              onClick={() => handleCopy('082240237910')}
+              onClick={() => handleCopy('085726270545')}
               className={`bg-[#5f443f] text-white px-3 py-1 rounded-full text-sm transition-transform duration-300 ${
-                copiedText === '082240237910'
+                copiedText === '085726270545'
                   ? 'scale-105 bg-green-500'
                   : 'hover:scale-110'
               }`}
             >
-              {copiedText === '082240237910' ? 'Copied!' : 'Copy'}
+              {copiedText === '085726270545' ? 'Copied!' : 'Copy'}
             </button>
           </div>
         </div>
