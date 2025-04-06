@@ -2,7 +2,7 @@ name: Deploy Next.js site to Pages
 
 on:
   push:
-    branches: ["master"]
+    branches: ['master']
   workflow_dispatch:
 
 permissions:
@@ -11,7 +11,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: "pages"
+  group: 'pages'
   cancel-in-progress: false
 
 jobs:
@@ -38,7 +38,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: '20'
           cache: ${{ steps.detect-package-manager.outputs.manager }}
       - name: Setup Pages
         uses: actions/configure-pages@v3
@@ -61,17 +61,24 @@ jobs:
           rm -rf out_resolved
           # Create fresh directory
           mkdir -p out_resolved
+          # Create .nojekyll file first
+          touch out_resolved/.nojekyll
           # Copy files while resolving symlinks and preserving attributes
-          cp -rL out/* out_resolved/
-          # Verify no symlinks remain
-          find out_resolved -type l -exec echo "Found symlink: {}" \;
-          # Optional: List total size
+          cp -rLf out/* out_resolved/ || true
+          # Remove any remaining symlinks (just in case)
+          find out_resolved -type l -delete
+          # Remove any empty directories
+          find out_resolved -type d -empty -delete
+          # Print final directory structure and size
+          echo "Final directory structure:"
+          ls -la out_resolved
+          echo "Total size:"
           du -sh out_resolved
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: github-pages
-          path: ./out_resolved
+          path: out_resolved
           compression-level: 9
 
   deploy:
