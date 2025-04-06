@@ -75,7 +75,7 @@ export default function OpeningPage({
               : 'opacity-0 translate-y-[-30px]'
           }`}
         >
-          {language == 'en' ? 'The Wedding of' : 'Pernikahan'}
+          {language == 'en' ? 'Download Mantu' : 'Ngunduh Mantu'}
         </p>
         <div
           className={`flex flex-col space-y-[-60px] items-center transition-all duration-[2000ms] delay-[300ms] ${
@@ -85,14 +85,14 @@ export default function OpeningPage({
           }`}
         >
           <span className='text-[#855f58] font-royal-wedding text-[80px]'>
-            Bilqis
+            Raihan
           </span>
           <span className='text-[#855f58] font-royal-wedding text-[80px]'>
             {' '}
             &{' '}
           </span>
           <span className='text-[#855f58] font-royal-wedding text-[80px]'>
-            Raihan
+            Bilqis
           </span>
         </div>
 

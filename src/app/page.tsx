@@ -10,6 +10,8 @@ import GiftPage from './components/GiftPage';
 import ClosingPage from './components/ClosingPage';
 import KindWordPage from './components/KindWordPage';
 import AttendanceConfirmationPage from './components/AttendanceConfirmationPage';
+import BrideReceptionPage from './components/BrideReceptionPage';
+import GroomReceptionPage from './components/GroomReceptionPage';
 
 function Home() {
   const audioRef = useRef<HTMLAudioElement | null>(null);
@@ -96,8 +98,8 @@ function Home() {
           <div className='transition-opacity duration-1000 ease-in-out opacity-100'>
             <WelcomePage language={language} />
             <PrayerPage language={language} />
-            <BridePage language={language} />
-            <GroomPage language={language} />
+            <GroomReceptionPage language={language} />
+            <BrideReceptionPage language={language} />
             <InvitationDetailPage language={language} />
             <AttendanceConfirmationPage language={language} />
             <KindWordPage language={language} />

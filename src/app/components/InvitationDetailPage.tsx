@@ -91,7 +91,7 @@ export default function InvitationDetailPage({
               : 'opacity-0 translate-y-[-30px]'
           }`}
         >
-          {language == 'en' ? 'Holy Matrimony' : 'Akad Nikah'}
+          {language == 'en' ? 'Reception' : 'Ngunduh Mantu'}
         </p>
         <div className='flex flex-col items-center mt-[20px]'>
           <div className='flex flex-col items-center space-y-1'>
@@ -111,8 +111,8 @@ export default function InvitationDetailPage({
               }`}
             >
               {language == 'en'
-                ? 'Saturday, 8 February 2025'
-                : 'Sabtu, 8 Februari 2025'}
+                ? 'Saturday, 26 April 2025'
+                : 'Sabtu, 26 April 2025'}
             </p>
             <p
               className={`text-[19px] font-cormorant-garamond text-[#5f443f] transition-all duration-[3000ms] delay-[2500ms] ${
@@ -142,7 +142,7 @@ export default function InvitationDetailPage({
                   : 'opacity-0 translate-y-[-30px]'
               }`}
             >
-              {language == 'en' ? 'Ponyo Nagreg Restaurant' : 'RM Ponyo Nagreg'}
+              {language == 'en' ? "D'Garden Restaurant" : "Resto D'Garden"}
             </p>
             <p
               className={`text-[#5f443f] text-[17px] text-center mt-2 transition-all duration-[3000ms] delay-[3500ms] ${
@@ -151,7 +151,7 @@ export default function InvitationDetailPage({
                   : 'opacity-0 translate-y-[-30px]'
               }`}
             >
-              Jl. Raya Bandung - Garut No.KM. 35, RT.4/RW.07
+              Jl. Paguyuban II - Garut No.KM. 35, RT.4/RW.07
             </p>
             <p
               className={`text-[#5f443f] text-[17px] text-center transition-all duration-[3000ms] delay-[3500ms] ${
@@ -160,7 +160,7 @@ export default function InvitationDetailPage({
                   : 'opacity-0 translate-y-[-30px]'
               }`}
             >
-              Citaman, Kec. Nagreg, Kab. Bandung, Jawa Barat
+              Arcawinanung, Kab. Banyumas, Jawa Tengah
             </p>
             <a
               href='https://maps.app.goo.gl/x5BsJDLtvbt17zUv8?g_st=com.google.maps.preview.copy'
@@ -173,7 +173,7 @@ export default function InvitationDetailPage({
               Google Maps
             </a>
 
-            <p
+            {/* <p
               className={`mt-5 text-[18px] italic text-center w-[400px] font-cormorant-garamond text-[#5f443f] transition-all duration-[3500ms] delay-[5000ms] ${
                 isVisible
                   ? 'opacity-100 translate-y-0'
@@ -183,7 +183,7 @@ export default function InvitationDetailPage({
               {language == 'en'
                 ? '(Wedding party will be held in Purwokerto)'
                 : '(Resepsi akan dilaksanakan di Purwokerto)'}
-            </p>
+            </p> */}
           </div>
         </div>
       </div>

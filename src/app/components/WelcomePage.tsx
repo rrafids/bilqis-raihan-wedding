@@ -83,7 +83,7 @@ export default function WelcomePage({ language }: WelcomePageProps) {
                 : 'translate-y-10 opacity-0'
             }`}
           >
-            {language == 'en' ? 'The Wedding of' : 'Pernikahan'}
+            {language == 'en' ? 'Download Mantu' : 'Ngunduh Mantu'}
           </p>
 
           {/* Step 2: "Bilqis & Raihan" */}
@@ -94,7 +94,7 @@ export default function WelcomePage({ language }: WelcomePageProps) {
                 : 'translate-y-10 opacity-0'
             }`}
           >
-            Bilqis & Raihan
+            Raihan & Bilqis
           </h1>
         </div>
 
@@ -106,17 +106,17 @@ export default function WelcomePage({ language }: WelcomePageProps) {
         >
           {/* Main Image */}
           <img
-            className='border-opacity-75 shadow-2xl border-[#855f58] rounded-[100px] z-10 w-[230px]'
+            className='border-opacity-75 shadow-2xl border-[#855f58] rounded-[100px] z-10 w-[250px]'
             alt='bilqisfa-raihan'
-            src='image/bilqisfa-raihan-clean.png'
+            src='image/bdg-wedding-crop.png'
           />
 
           <div className='flex flex-col items-center mt-[30px] space-y-5'>
             <div className='flex flex-col items-center space-y-1'>
               <p className='mt-[10px] rounded-full italic bg-[#855f58] text-white py-1 px-3 font-cormorant-garamond text-[18px]'>
                 {language == 'en'
-                  ? 'Saturday, 8 February 2025'
-                  : 'Sabtu, 8 Februari 2025'}
+                  ? 'Saturday, 26 April 2025'
+                  : 'Sabtu, 26 April 2025'}
               </p>
 
               <h1 className='italic text-[#855f58] rounded-lg bg-opacity-40 px-3 font-cormorant-garamond text-[18px]'>

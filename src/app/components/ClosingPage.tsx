@@ -19,13 +19,13 @@ export default function ClosingPage({ language }: ClosingPageProps) {
         </p>
         <div className='flex flex-col space-y-[-50px] items-center'>
           <span className='text-[#855f58] font-royal-wedding text-[80px]'>
-            Bilqis
+            Raihan
           </span>
           <span className='text-[#855f58] font-royal-wedding text-[80px]'>
             &
           </span>
           <span className='text-[#855f58] font-royal-wedding text-[80px]'>
-            Raihan
+            Bilqis
           </span>
         </div>
         <h1 className='mt-[10px] italic text-[#855f58] rounded-lg bg-opacity-40 px-3 font-cormorant-garamond text-[18px]'>
