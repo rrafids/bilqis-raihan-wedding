@@ -59,6 +59,7 @@ jobs:
         run: |
           # Create a fresh temporary directory
           TEMP_DIR=$(mktemp -d)
+          echo "Using temporary directory: $TEMP_DIR"
           
           # Create .nojekyll file
           touch "$TEMP_DIR/.nojekyll"
@@ -71,21 +72,23 @@ jobs:
             cp -P "{}" "$0/{}"
           ' "$TEMP_DIR" \;
           
+          # Go to workspace root before verification
+          cd ${{ github.workspace }}
+          
           # Verify the contents
           echo "Verifying copied files..."
-          cd "$TEMP_DIR"
-          find . -type f | sort
+          find "$TEMP_DIR" -type f | sort
           
           # Check for any remaining symlinks
           echo "Checking for symlinks..."
-          if find . -type l | grep .; then
+          if find "$TEMP_DIR" -type l | grep .; then
             echo "Error: Symlinks found!"
             exit 1
           fi
           
           # Show total size
           echo "Total size:"
-          du -sh .
+          du -sh "$TEMP_DIR"
           
           # Move to final location
           rm -rf out_resolved
