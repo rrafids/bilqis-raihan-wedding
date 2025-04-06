@@ -55,15 +55,26 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
-      - name: Resolve Symlinks in Output Directory
+      - name: Static HTML export with Next.js
+        run: ${{ steps.detect-package-manager.outputs.runner }} next export
+      - name: Clean and prepare output
         run: |
+          # Remove any existing resolved output directory
+          rm -rf out_resolved
+          # Create fresh directory
           mkdir -p out_resolved
-          cp -rL ./out/* ./out_resolved/
+          # Copy files while resolving symlinks and preserving attributes
+          cp -rL out/* out_resolved/
+          # Verify no symlinks remain
+          find out_resolved -type l -exec echo "Found symlink: {}" \;
+          # Optional: List total size
+          du -sh out_resolved
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: github-pages
           path: ./out_resolved
+          compression-level: 9
 
   deploy:
     environment:
