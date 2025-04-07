@@ -92,7 +92,7 @@ export default function GroomReceptionPage({
           <div className='col-span-1'>
             <img
               alt='the groom img'
-              src='image/the-groom-wed.png'
+              src='image/the-groom-wed-2.png'
               className={`w-[200px] rounded-t-full border-4 shadow-xl border-opacity-30 border-white transition-all duration-[2000ms] delay-[1000ms] ${
                 isVisible
                   ? 'opacity-100 translate-y-0'
