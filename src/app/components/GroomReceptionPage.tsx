@@ -75,7 +75,7 @@ export default function GroomReceptionPage({
           >
             {language == 'en'
               ? "We're inviting you to our"
-              : 'Kami mengundang Bapak/Ibu/Saudara/i ke acara'}
+              : 'Kami mengundang Bapak/Ibu/Saudara/i ke'}
           </p>
           <p
             className={`text-[18px] font-semibold text-center transition-all duration-[2000ms] ${
@@ -84,11 +84,11 @@ export default function GroomReceptionPage({
                 : 'opacity-0 translate-y-[-30px]'
             }`}
           >
-            {language == 'en' ? 'reception:' : 'ngunduh mantu:'}
+            {language == 'en' ? 'reception:' : 'acara ngunduh mantu:'}
           </p>
         </div>
 
-        <div className='mt-[50px] grid grid-cols-2 w-full'>
+        <div className='mt-[40px] grid grid-cols-2 w-full'>
           <div className='col-span-1'>
             <img
               alt='the groom img'

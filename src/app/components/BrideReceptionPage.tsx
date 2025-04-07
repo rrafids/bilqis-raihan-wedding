@@ -80,7 +80,7 @@ export default function BrideReceptionPage({
             <img
               alt='the bride img'
               src='image/bread-wedding.png'
-              className={`w-[200px] shadow-xl rounded-t-full border-4 border-opacity-30 border-white transition-all duration-[2000ms] delay-[1000ms] ${
+              className={`w-[200px] shadow-xl rounded-t-full border-4 border-opacity-30 border-white transition-all duration-[2000ms] delay-[1000ms] me-3 ${
                 isVisible
                   ? 'opacity-100 translate-y-0'
                   : 'opacity-0 translate-y-[-30px]'
