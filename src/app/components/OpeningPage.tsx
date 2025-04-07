@@ -75,7 +75,7 @@ export default function OpeningPage({
               : 'opacity-0 translate-y-[-30px]'
           }`}
         >
-          {language == 'en' ? 'Download Mantu' : 'Ngunduh Mantu'}
+          {language == 'en' ? 'Wedding Reception' : 'Ngunduh Mantu'}
         </p>
         <div
           className={`flex flex-col space-y-[-60px] items-center transition-all duration-[2000ms] delay-[300ms] ${

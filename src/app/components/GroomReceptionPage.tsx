@@ -151,7 +151,7 @@ export default function GroomReceptionPage({
           <p className='text-[#5f443f]'>
             {language == 'en'
               ? 'First Son of Mr. Irwanto Adi & Mrs. Setyo Rini'
-              : 'Putri Pertama dari Bapak Irwanto Adi & Ibu Setyo Rini'}
+              : 'Putra Pertama dari Bapak Irwanto Adi & Ibu Setyo Rini'}
           </p>
         </div>
       </div>

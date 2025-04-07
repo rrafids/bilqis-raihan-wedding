@@ -83,7 +83,7 @@ export default function WelcomePage({ language }: WelcomePageProps) {
                 : 'translate-y-10 opacity-0'
             }`}
           >
-            {language == 'en' ? 'Download Mantu' : 'Ngunduh Mantu'}
+            {language == 'en' ? 'Wedding Reception' : 'Ngunduh Mantu'}
           </p>
 
           {/* Step 2: "Bilqis & Raihan" */}
