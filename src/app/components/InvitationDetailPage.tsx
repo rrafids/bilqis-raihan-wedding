@@ -160,8 +160,16 @@ export default function InvitationDetailPage({
                   : 'opacity-0 translate-y-[-30px]'
               }`}
             >
-              Arcawinangun, Kec. Purwokerto Tim., Kabupaten Banyumas, Jawa
-              Tengah
+              Arcawinangun, Kec. Purwokerto Timur, Kabupaten Banyumas
+            </p>
+            <p
+              className={`text-[#5f443f] text-[17px] text-center transition-all duration-[3000ms] delay-[3500ms] ${
+                isVisible
+                  ? 'opacity-100 translate-y-0'
+                  : 'opacity-0 translate-y-[-30px]'
+              }`}
+            >
+              Jawa Tengah
             </p>
             <a
               href='https://maps.app.goo.gl/dF9bKenf6puwUPYVA?g_st=com.google.maps.preview.copy'
